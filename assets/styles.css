@@ -40,3 +40,14 @@
         display: flex;
         flex-direction: column;
     }
+    
+    .header {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .container_left {
+        color: #FFFFFF;
+    }
