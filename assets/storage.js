@@ -1,3 +1,27 @@
+const recomenda = [{
+        id: 1,
+        name: 'Bennazianna',
+        precio: '$3650',
+        data: 'La mas completa',
+        img: '"./assets/img/menu0.png"'
+    },
+    {
+        id: 2,
+        name: 'Tronco-Pizza',
+        precio: '$870',
+        data: 'Para todo el dia',
+        img: '"./assets/img/menu0.png"'
+
+    },
+    {
+        id: 3,
+        name: 'Papas / Provenzal',
+        precio: '$360',
+        data: 'Van como piña',
+        img: '"./assets/img/menu0.png"'
+
+    },
+]
 const categorias = ['Pizzas', 'Hamburguesas', 'Napapuki', 'individuales', 'Tronco-Pizza', 'Papas / Provensal']
 const menu = [{
         id: 1,
