@@ -18,3 +18,25 @@
         --gradient1: #FFA100;
         --gradient2: #FB103D;
     }
+    
+    .navbar {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .menu_izq {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .user {
+        display: flex;
+        flex-direction: column;
+    }
