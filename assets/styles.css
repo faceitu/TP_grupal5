@@ -56,7 +56,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 60px;
+    }
+
+    .btn_home{
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        font-size: 12px;
+        font-weight: 400;
+    
+    }
+
+    .btn_home img{
+        padding-right: 15px;
     }
     
     .user {
@@ -71,17 +84,38 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     
     .header_slogan {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        position: relative;
     }
 
     .text_sub_slogan{
         font-size: 21px;
         font-weight: 400;
+    }
+
+    .header_right{
+        display: flex;
+        position: relative;
+    }
+
+    .header_img_1{
+        width: 265px;
+        z-index: 0;
+        margin-right: 140px;
+    }
+
+    .header_img_2{
+        position: absolute;
+        top: -100px;
+        right: -90px;
+        width: 360px;
+        z-index: 999;
     }
     
     .btn {
@@ -150,7 +184,7 @@
         
     }
 
-    .recomendation {
+    .section {
         margin-top: 80px;
         display: flex;
         flex-direction: column;
@@ -161,11 +195,62 @@
     .title_section_h3{
         font-size: 22px;
         font-weight: 500;
+        margin-bottom: 20px;
     }
 
     #container_recomndation {
-        margin-top: 20px;
         display: flex;
         justify-content: center;
         gap: 40px;
+    }
+
+    /*CATEGORIES*/
+    .container_categories{
+        display: flex;
+        gap: 35px;
+        margin: 30px 0;
+        
+    }
+
+    .card_categories{
+        width: 147px;
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+
+    }
+
+    .img_icon_card{
+        display: flex;
+    }
+
+    .img_icon{
+        width: 71px;
+    }
+
+    .icon_categories{
+        position: relative;
+        z-index: 999;
+    }
+
+    .icon_blur{
+        position: absolute;
+        bottom: 60px;
+        left: 45px;
+        opacity: 0.5;
+        z-index: 0;
+        filter: blur(5px);
+    }
+
+    .subtitle_categories{
+        font-weight: 400;
+        opacity: 1;
+
+    }
+
+    .line_categories{
+        background: linear-gradient(98.81deg, var(--gradient1) -0.82%, var(--gradient2) 101.53%);
+        width: 24px;
+        height: 4px;
+        border-radius: 15px;
     }
