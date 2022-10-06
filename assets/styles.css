@@ -193,7 +193,7 @@ body {
     margin-bottom: 20px;
 }
 
-#container_recomndation {
+.sub_container{
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -248,3 +248,43 @@ body {
     height: 4px;
     border-radius: 15px;
 }
+
+    /*POPULAR*/
+
+    .card_most_popular{
+        flex-direction: column;
+    }
+
+    .container_text_popular{
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+    }
+
+    /*FOOTER*/
+    .footer{
+        margin: 0 auto;
+        margin-top: 80px;
+        align-items: center;
+        gap:50px
+    }
+    .footer_links{
+        display: flex;
+        gap: 25px;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .footer_copyright{
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .strong_copy{
+        font-weight: 900;
+        
+    }
+
+    .hearth{
+        color: red;
+    }
