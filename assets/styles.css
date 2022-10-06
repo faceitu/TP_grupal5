@@ -14,7 +14,8 @@
     }
     
     h2 {
-        font-size: 3rem;
+        font-size: 51px;
+        font-weight: 700;
     }
     
     body {
@@ -77,9 +78,14 @@
         flex-direction: column;
         gap: 40px;
     }
+
+    .text_sub_slogan{
+        font-size: 21px;
+        font-weight: 400;
+    }
     
     .btn {
-        background: linear-gradient(98.81deg, #FFA100 -0.82%, #FB103D 101.53%);
+        background: linear-gradient(98.81deg, var(--gradient1) -0.82%, var(--gradient2) 101.53%);
         box-shadow: 11px 28px 50px rgba(20, 78, 90, 0.2);
         color: #FFFFFF;        
     }
@@ -102,28 +108,59 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        padding: 10px;
+        padding: 20px 15px;
         color: #FFFFFF;
     }
     
     .btn_card {
-        background: linear-gradient(98.81deg, #FFA100 -0.82%, #FB103D 101.53%);
-        box-shadow: 11px 28px 50px rgba(20, 78, 90, 0.2);
         border-radius: 15px;
         padding-bottom: 8px;
         padding-top: 8px;
         padding-left: 16px;
         padding-right: 16px;
-        color: #FFFFFF;
-        font-size: .8rem;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .text_card{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+    }
+
+    .title_card{
+        font-size: 15px;
+        font-weight: 500;
+        
     }
     
+    .subtitle_card{
+        font-size: 14px;
+        font-weight: 400;
+        opacity: 0.3;
+        line-height: 17px;
+    }
+
+    .price_card{
+        font-size: 19px;
+        font-weight: 700;
+        background: linear-gradient(58.81deg, var(--gradient1) -1%, var(--gradient2) 53%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        
+    }
+
     .recomendation {
         margin-top: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         
+    }
+
+    .title_section_h3{
+        font-size: 22px;
+        font-weight: 500;
     }
 
     #container_recomndation {

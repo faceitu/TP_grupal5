@@ -4,14 +4,14 @@ const reco = document.getElementById('container_recomndation')
 
 const rendersection = menu => {
 
-    return `<div class = "card" >
+    return `<div class = "card card_recomendation" >
         <img src = "${menu.img}" >
         <div class = "text_card" >
             <span class = "tittle_card" > Bennaziana </span> 
-            <p class = "data_card" > La mas completa</p> 
-            <span > $ 3650 </span> 
+            <p class = "subtitle_card" > La mas completa</p> 
+            <span class="price_card"> $ 3650 </span> 
             </div> 
-            <div class = "btn_card" > Agregar </div> 
+            <div class = "btn btn_card" > Agregar </div> 
         </div> `
 };
 
