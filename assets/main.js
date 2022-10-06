@@ -1,4 +1,4 @@
-const reco = document.getElementById('recom')
+const reco = document.getElementById('container_recomndation')
 
 
 
