@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@100;400;700&display=swap');
+
 * {
         margin: 0;
         padding: 0;
@@ -8,7 +9,8 @@
     }
     
     h1 {
-        font-size: 4rem;
+        font-size: 66px;
+        font-weight: 700;
     }
     
     h2 {
@@ -19,9 +21,10 @@
         background-color: #131415;
         height: 100vh;
         width: 100%;
+        color: var(--blanco);
     }
     
-     :root {
+    :root {
         --gris: #252525;
         --amarillo: #FFA400;
         --rojo: #FFA400;
@@ -40,7 +43,7 @@
         flex-direction: row;
     }
     
-    .menu_izq {
+    .navbar_menu {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -61,11 +64,7 @@
         align-items: center;
     }
     
-    .container_left {
-        color: #FFFFFF;
-    }
-    
-    .container_left_secundario {
+    .header_slogan {
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -107,7 +106,7 @@
         font-size: .8rem;
     }
     
-    .recomendaciones {
+    .recomendation {
         margin-top: 80px;
         display: flex;
         justify-content: center;
