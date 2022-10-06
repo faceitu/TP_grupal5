@@ -21,7 +21,7 @@ const renderCategories = cat => {
                 <div class="icon_img_card">
                         <img class="img_icon icon_categories" src=${cat.img} alt="">
                 </div>
-                 <img class="img_icon icon_blur" src="./assets/img/icon_pizza.png" alt="">
+                 <img class="img_icon icon_blur" src=${cat.img} alt="">
                  <p class="subtitle_card subtitle_categories">${cat.name}</p>
                 <span class="line_categories"></span>
             </div>
