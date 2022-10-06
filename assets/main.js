@@ -3,12 +3,13 @@ const categorie = document.querySelector('.container_categories')
 
 
 const rendersection = menu => {
-    return `<div class = "card card_recomendation" >
-        <img src = "${menu.img}" >
-        <div class = "text_card" >
-            <span class = "tittle_card" > ${menu.name} </span> 
-            <p class = "subtitle_card" > La mas completa</p> 
-            <span class="price_card"> ${menu.precio} </span> 
+    return `
+        <div class = "card card_recomendation" >
+             <img src = "${menu.img}" >
+             <div class = "text_card" >
+                 <span class = "tittle_card" > ${menu.name} </span> 
+                 <p class = "subtitle_card" > La mas completa</p> 
+                 <span class="price_card"> ${menu.precio} </span> 
             </div> 
             <div class = "btn btn_card" > Agregar </div> 
         </div> `
