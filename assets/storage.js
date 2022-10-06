@@ -1,4 +1,4 @@
-const recomenda = [{
+const findings = [{
         id: 1,
         name: 'Bennazianna',
         precio: '$3650',
@@ -22,7 +22,36 @@ const recomenda = [{
 
     },
 ]
-const categorias = ['Pizzas', 'Hamburguesas', 'Napapuki', 'individuales', 'Tronco-Pizza', 'Papas / Provensal']
+const categories = [{
+        name: 'Pizzas',
+        img: './assets/img/Categories/icon_pizza.png'
+    },
+    {
+        name: 'Hamburguesas',
+        img: "./assets/img/Categories/icon_burger.png"
+    },
+    {
+        name: 'Napapuki',
+        img: './assets/img/Categories/fries2.png'
+    },
+    {
+        name: 'Individuales',
+        img: './assets/img/Categories/pizza.png'
+    },
+    {
+        name: 'Wraps',
+        img: './assets/img/Categories/buritto1.png'
+    },
+    {
+        name: 'Mexican food',
+        img: './assets/img/Categories/taco.png'
+    },
+    {
+        name: 'Batidukis',
+        img: './assets/img/Categories/helado.png'
+    },
+
+];
 
 const menu =
 
