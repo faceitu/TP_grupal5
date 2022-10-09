@@ -1,5 +1,9 @@
 const finding = document.getElementById('container_recomndation')
 const categorie = document.querySelector('.container_categories')
+// const btn = document.querySelector('.btn_card')
+// const popular = document.querySelector('.card_most_popular')
+// const addBtn = document.querySelector('.section recomendation')
+
 
 
 const rendersection = menu => {
@@ -11,7 +15,7 @@ const rendersection = menu => {
                  <p class = "subtitle_card" > La mas completa</p> 
                  <span class="price_card"> ${menu.precio} </span> 
             </div> 
-            <div class = "btn btn_card" > Agregar </div> 
+            <a href class = "btn btn_card" > Agregar </a> 
         </div> `
 };
 
@@ -38,10 +42,20 @@ const renderPage = () => {
 
 
 
+// loadEventListenrs()
+// function loadEventListenrs() {
+//     addBtn.addEventListener('click', addProduct);
+// }
+// function addProduct(e) {
+//     e.preventDefault();
+//     if (e.target.classList.contains('btn')){
+//         console.log(e.target)
+//     }
+// }
 
 const init = () => {
     window.addEventListener('DOMContentLoaded', renderPage);
-
+    
 }
 
 
