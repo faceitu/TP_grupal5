@@ -165,7 +165,7 @@ const menu =
             data: 'Explocion galactica',
             img: './assets/img/papas/cheddar-verdeo.png',
             cat: 'Papas',
-            popular: true
+            popular: false
         },
         {
             id: 16,
@@ -174,7 +174,7 @@ const menu =
             data: 'A otra dimencion',
             img: './assets/img/papas/papas-barbacoa.jpg',
             cat: 'Papas',
-            popular: true
+            popular: false
         },
         {
             id: 17,
@@ -183,6 +183,62 @@ const menu =
             data: 'Tormenta nebular',
             img: './assets/img/papas/papas-beacon.jpg',
             cat: 'Papas',
+            popular: false
+        },
+        {
+            id: 18,
+            name: 'Wrpa/Vegetales',
+            precio: '$1310',
+            data: 'Cadenas de andromeda',
+            img: './assets/img/wraps/wrap-vegetales.jpg',
+            cat: 'wraps',
+            popular: false
+        },
+        {
+            id: 19,
+            name: 'Wrpa/italiano',
+            precio: '$1410',
+            data: 'Polvo de diamante',
+            img: './assets/img/wraps/wrap-italiano.jpg',
+            cat: 'wraps',
+            popular: false
+        },
+        {
+            id: 20,
+            name: 'Wrpa/Pollo',
+            precio: '$1190',
+            data: 'Gran cuerno',
+            img: './assets/img/wraps/wrap-pollo.jpg',
+            cat: 'wraps',
+            popular: false
+        },
+        {
+            id: 21,
+            name: 'Taco/Asado',
+            precio: '$1990',
+            data: 'Espada escalubur',
+            img: './assets/img/tacos/taco-asado.jpg',
+            cat: 'tacos',
+            popular: false
+        },
+        {
+            id: 22,
+            name: 'Taco/Cerdo',
+            precio: '$1770',
+            data: 'Ejecucion aurora',
+            img: './assets/img/tacos/taco-cerdo.jpg',
+            cat: 'tacos',
             popular: true
-        }
+        },
+        {
+            id: 23,
+            name: 'Taco/Primavera',
+            precio: '$1770',
+            data: 'Rosas pirañas',
+            img: './assets/img/tacos/taco-primavera.jpg',
+            cat: 'tacos',
+            popular: true
+        },
+
+
     ]

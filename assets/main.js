@@ -1,13 +1,15 @@
-const finding = document.getElementById('container_recomndation')
-const categorie = document.querySelector('.container_categories')
-    // const btn = document.querySelector('.btn_card')
-    // const popular = document.querySelector('.card_most_popular')
-    // const addBtn = document.querySelector('.section recomendation')
+const finding = document.getElementById('container_recomndation');
+const categorie = document.querySelector('.container_categories');
+const mostPopular = document.getElementById('card-popular');
+// const btn = document.querySelector('.btn_card')
+// const popular = document.querySelector('.card_most_popular')
+// const addBtn = document.querySelector('.section recomendation')
 
 
 
 const rendersection = menu => {
     return `
+
         <div class = "card card_recomendation" >
              <img  class = "img" src = "${menu.img}" >
              <div class = "text_card" >
@@ -31,14 +33,30 @@ const renderCategories = cat => {
                 <span class="line_categories"></span>
             </div>
     `
+};
+
+const renderPopular = (prod) => {
+    return `
+    
+    <img src="${prod.img}" alt="">
+    <div class="container_text_popular">
+        <div class="text_card">
+            <span class="tittle_card">${prod.name} </span>
+            <p class="subtitle_card"> ${prod.data}</p>
+            <span class="price_card"> ${prod.precio}</span>
+        </div>
+        <div class="btn btn_card"> Agregar </div>
+    </div>
+     `
 }
 
 
-
 const renderPage = () => {
-    mostPopular = menu.filter(prod => prod.popular === true)
-    finding.innerHTML = mostPopular.map(prod => rendersection(prod)).join('')
+    populars = menu.filter(prod => prod.popular === true);
+    finding.innerHTML = populars.map(prod => rendersection(prod)).join('')
     categorie.innerHTML = categories.map(cat => renderCategories(cat)).join('')
+    mostPopular.innerHTML = populars.map(prod => renderPopular(prod)).join('')
+
 }
 
 
