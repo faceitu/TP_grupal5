@@ -109,16 +109,16 @@ const menu =
             name: 'Bennazianna',
             precio: '$3650',
             data: 'La mas completa',
-            img: './assets/img/menu_reco1.png',
+            img: './assets/img/menu_reco1.jpg',
             cat: 'Pizza',
-            popular: true
+            popular: false
         },
         {
             id: 10,
             name: 'Tronco-Pizza',
             precio: '$870',
             data: 'Para todo el dia',
-            img: './assets/img/menu_reco2.png',
+            img: './assets/img/menu_reco2.jpg',
             cat: 'Pizza',
             popular: true
         },
@@ -127,7 +127,7 @@ const menu =
             name: 'Papas / Provenzal',
             precio: '$360',
             data: 'Van como piña',
-            img: './assets/img/menu_reco3.png',
+            img: './assets/img/menu_reco3.jpg',
             cat: 'Papas',
             popular: true
         },

@@ -1,6 +1,6 @@
 const finding = document.getElementById('container_recomndation');
 const categorie = document.querySelector('.container_categories');
-const mostPopular = document.getElementById('card-popular');
+const mostPopular = document.getElementById('container_most_popular');
 // const btn = document.querySelector('.btn_card')
 // const popular = document.querySelector('.card_most_popular')
 // const addBtn = document.querySelector('.section recomendation')
@@ -37,8 +37,8 @@ const renderCategories = cat => {
 
 const renderPopular = (prod) => {
     return `
-    
-    <img src="${prod.img}" alt="">
+    <div class = "card card_most_popular" >
+    <img class = "img_popular" src="${prod.img}" alt="">
     <div class="container_text_popular">
         <div class="text_card">
             <span class="tittle_card">${prod.name} </span>
@@ -46,6 +46,7 @@ const renderPopular = (prod) => {
             <span class="price_card"> ${prod.precio}</span>
         </div>
         <div class="btn btn_card"> Agregar </div>
+    </div>
     </div>
      `
 }
