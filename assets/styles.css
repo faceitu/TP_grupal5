@@ -132,7 +132,6 @@ body {
     font-weight: 700;
 }
 
-
 .card {
     background: #252525;
     box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.9);
@@ -146,13 +145,11 @@ body {
     transition: all .2s ease-in-out;
 }
 
-.card:hover{
+.card:hover {
     opacity: 0.9;
     background-color: #2e2c2c;
     transform: scale(1.1);
 }
-
-
 
 .btn_card {
     border-radius: 15px;
@@ -190,7 +187,6 @@ body {
     -webkit-background-clip: text;
 }
 
-
 .section {
     margin-top: 80px;
     display: flex;
@@ -208,6 +204,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+.img {
+    width: 62px;
+    height: 62px;
+    border-radius: 12px;
 }
 
 
@@ -303,18 +305,12 @@ body {
     color: red;
 }
 
-
-
-
 .logo {
-    animation: girologo .2s linear ;
-
+    animation: girologo .2s linear;
 }
 
 @keyframes girologo {
     from {
         transform: rotateY(180deg);
-}
-
-
+    }
 }
