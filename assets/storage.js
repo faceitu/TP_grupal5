@@ -38,7 +38,8 @@ const menu =
             data: 'solo para expertos',
             img: './assets/img/menu0.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
 
         },
         {
@@ -48,7 +49,8 @@ const menu =
             data: 'c / jamon crudo ',
             img: './assets/img/menu1.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 3,
@@ -57,7 +59,8 @@ const menu =
             data: '¡Basta!',
             img: './assets/img/menu2.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 4,
@@ -66,7 +69,8 @@ const menu =
             data: '¡Eterna!',
             img: './assets/img/menu4.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 5,
@@ -75,7 +79,8 @@ const menu =
             data: 'Pica 2 veces',
             img: './assets/img/menu5.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 6,
@@ -84,7 +89,8 @@ const menu =
             data: 'En honor al 1',
             img: './assets/img/menu6.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 7,
@@ -93,7 +99,8 @@ const menu =
             data: '¡De pie señores!',
             img: './assets/img/menu7.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 8,
@@ -102,7 +109,8 @@ const menu =
             data: 'La que desaparece',
             img: './assets/img/menu4.png',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 9,
@@ -111,7 +119,8 @@ const menu =
             data: 'La mas completa',
             img: './assets/img/menu_reco1.jpg',
             cat: 'Pizza',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 10,
@@ -120,7 +129,8 @@ const menu =
             data: 'Para todo el dia',
             img: './assets/img/menu_reco2.jpg',
             cat: 'Pizza',
-            popular: true
+            popular: true,
+            recomendada: false
         },
         {
             id: 11,
@@ -129,7 +139,8 @@ const menu =
             data: 'Van como piña',
             img: './assets/img/menu_reco3.jpg',
             cat: 'Papas',
-            popular: true
+            popular: true,
+            recomendada: false
         },
         {
             id: 12,
@@ -138,7 +149,8 @@ const menu =
             data: 'Va con un hepatalgina',
             img: './assets/img/burguers/rompehigados.jpg',
             cat: 'hamburguesa',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 13,
@@ -147,7 +159,8 @@ const menu =
             data: 'Refrescante',
             img: './assets/img/burguers/primavera.jpg',
             cat: 'hamburguesa',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 14,
@@ -156,7 +169,8 @@ const menu =
             data: 'Delicia de la casa',
             img: './assets/img/burguers/triple-cheddar.jpeg',
             cat: 'hamburguesa',
-            popular: false
+            popular: true,
+            recomendada: false
         },
         {
             id: 15,
@@ -165,7 +179,8 @@ const menu =
             data: 'Explocion galactica',
             img: './assets/img/papas/cheddar-verdeo.png',
             cat: 'Papas',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 16,
@@ -174,7 +189,8 @@ const menu =
             data: 'A otra dimencion',
             img: './assets/img/papas/papas-barbacoa.jpg',
             cat: 'Papas',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 17,
@@ -183,7 +199,8 @@ const menu =
             data: 'Tormenta nebular',
             img: './assets/img/papas/papas-beacon.jpg',
             cat: 'Papas',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 18,
@@ -192,7 +209,8 @@ const menu =
             data: 'Cadenas de andromeda',
             img: './assets/img/wraps/wrap-vegetales.jpg',
             cat: 'wraps',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 19,
@@ -201,7 +219,8 @@ const menu =
             data: 'Polvo de diamante',
             img: './assets/img/wraps/wrap-italiano.jpg',
             cat: 'wraps',
-            popular: false
+            popular: false,
+            recomendada: false
         },
         {
             id: 20,
@@ -210,7 +229,8 @@ const menu =
             data: 'Gran cuerno',
             img: './assets/img/wraps/wrap-pollo.jpg',
             cat: 'wraps',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 21,
@@ -219,7 +239,8 @@ const menu =
             data: 'Espada escalubur',
             img: './assets/img/tacos/taco-asado.jpg',
             cat: 'tacos',
-            popular: false
+            popular: false,
+            recomendada: true
         },
         {
             id: 22,
@@ -228,7 +249,8 @@ const menu =
             data: 'Ejecucion aurora',
             img: './assets/img/tacos/taco-cerdo.jpg',
             cat: 'tacos',
-            popular: true
+            popular: false,
+            recomendada: false
         },
         {
             id: 23,
@@ -237,8 +259,11 @@ const menu =
             data: 'Rosas pirañas',
             img: './assets/img/tacos/taco-primavera.jpg',
             cat: 'tacos',
-            popular: true
+            popular: false,
+            recomendada: false
         },
 
-
     ]
+
+
+    
