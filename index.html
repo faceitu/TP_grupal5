@@ -5,58 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protyecyo Grupal</title>
+    <title>E5 - Proyecto Grupal</title>
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./assets/img/nucbazappiicon.png" alt="">
-        </div>
-        <div class="menu_izq">
-            <img src="./assets/img/Home.png" alt="">
-            <img src="./assets/img/Fill 7.png" alt="">
-            <div class="user">
-                <img src="./assets/img/Fill 4.png" alt="">
-                <img src="./assets/img/Fill 1.png" alt="">
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/img/nucbazappiicon.png" alt="">
             </div>
+            <div class="navbar_menu">
+                <span class="btn_home"><img src="./assets/img/Home.png" alt="Inicio">Home</span>
+                <img src="./assets/img/Fill 7.png" alt="carrito icono">
+                <div class="user">
+                    <img src="./assets/img/Fill 4.png" alt="">
+                    <img src="./assets/img/Fill 1.png" alt="">
+                </div>
 
-        </div>
-    </nav>
+            </div>
+        </nav>
 
-    <div class="main_container">
+
         <section class="header">
-            <div class="container_left">
-                <div class="container_left_secundario">
-                    <div class="texto_container left">
-                        <h1>Si tenes Zappi,</h1>
-                        <h2>tenes Nucba.</h2>
-                        <br>
-                        <span>Busca lo que quieras y nucba te quedes sin comida</span>
-                    </div>
-                    <div class="btn_container left">
-                        <a href="" class="btn">VER MAS</a>
-                    </div>
+            <div class="header_slogan">
+                <div class="text_slogan">
+                    <h1>Si tenes Zappi,</h1>
+                    <h2>tenes Nucba.</h2>
+                    <span class="text_sub_slogan">Busca lo que quieras y nucba te quedes sin comida</span>
+                </div>
+                <div class="header_link">
+                    <a href="" class="btn btn_header">VER MÁS</a>
                 </div>
             </div>
-            <div class="container_right">
-                <img src="./assets/img/pizza 1 (2).png" alt="">
+            <div class="header_right">
+                <img class="header_img_1" src="./assets/img/pizza_header.png" alt="imagen pizza pepperoni">
+                <img class="header_img_2" src="./assets/img/pizza_header1.png" alt="imagen pizza">
             </div>
         </section>
-        <section class="recomendaciones"></section>
-        <section class="categorias"></section>
-        <section class="populares"></section>
-        <footer class="footer"></footer>
+
+        <section class="section recomendation">
+            <h3 class="title_section_h3">Hoy te recomendamos</h3>
+            <div id="container_recomndation" class="sub_container">
+                <!--Resultados de recomendaciones-->
+            </div>
+
+        </section>
+        <section class="section categories">
+            <h3 class="title_categories">Categorias</h3>
+            <div class="container_categories"></div>
+        </section>
+
+        <section class="section most_popular">
+            <h3 class="title_section_h3">Los más populares</h3>
+            <div id="container_most_popular" class="sub_container">
+                <!--Template card populares-->
+
+                <div class="card card_most_popular" id="card-popular">
+
+                </div>
 
 
+                <!--Template card populares-->
 
-
-
-
+            </div>
+        </section>
+        
+        <footer class="section footer">
+            <div class="footer_links">
+                <span>Términos de Uso</span>
+                <span>Trabajá con Nosotros</span>
+                <span>Soporte</span>
+            </div>
+            <div class="footer_copyright">
+                <p>Hecho con <i class="hearth">❤</i> en <strong class="strong_copy">NUCBAZAPPI</strong></p>
+            </div>
+        </footer>
 
     </div>
-
+    <script src="./assets/storage.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 
 </html>
