@@ -54,6 +54,7 @@ const renderPopular = (prod) => {
 
 const renderPage = () => {
     populars = menu.filter(prod => prod.popular === true);
+
     finding.innerHTML = populars.map(prod => rendersection(prod)).join('')
     categorie.innerHTML = categories.map(cat => renderCategories(cat)).join('')
     mostPopular.innerHTML = populars.map(prod => renderPopular(prod)).join('')
