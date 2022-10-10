@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 1186px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +202,8 @@ body {
 
 .sub_container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    /* justify-content: center; */
     gap: 40px;
 }
 
@@ -213,7 +214,9 @@ body {
 }
 
 .img_popular {
-    border-radius: 12px;
+    border-radius: 16px;
+    width: 237px;
+    height: 97px;
 }
 
 
@@ -224,9 +227,21 @@ body {
     gap: 35px;
     margin: 30px 0;
 }
+.card_recomendation{
+    width: 347px;
+    height: 103px;
+}
+
+#container_recomndation{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 
 .card_categories {
     width: 147px;
+    height: 171px;
     flex-direction: column;
     position: relative;
     gap: 10px;
@@ -271,7 +286,16 @@ body {
 
 .card_most_popular {
     flex-direction: column;
+    width: 265px;
+    height: 213px;
+    text-align: center;
+    
 }
+
+#container_most_popular{
+
+}
+
 
 .container_text_popular {
     display: flex;
