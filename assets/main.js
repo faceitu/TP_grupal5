@@ -21,7 +21,6 @@ const rendersection = menu => {
 const selectCategories = (e) => {
     tag = e.target.getAttribute('data-id')
     menuPorCategoria = menu.filter(categoria => categoria.cat === tag);
-    console.log(menuPorCategoria)
     if (menuPorCategoria.length > 0) {
         console.log(tituloMostpopular)
         tituloMostpopular.textContent = tag
