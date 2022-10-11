@@ -31,7 +31,7 @@ const selectCategories = (e) => {
         mostPopular.innerHTML = renderError()
         setTimeout(() => {
             mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
-        }, 50000);
+        }, 5000);
     }
 }
 
