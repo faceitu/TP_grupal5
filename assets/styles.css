@@ -291,7 +291,11 @@ body {
     text-align: center;
 }
 
-#container_most_popular {}
+#container_most_popular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container_text_popular {
     display: flex;

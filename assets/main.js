@@ -2,7 +2,7 @@ const finding = document.getElementById('container_recomndation');
 const categorie = document.querySelector('.container_categories');
 const mostPopular = document.getElementById('container_most_popular');
 const btnCall = document.querySelectorAll('btn_card');
-
+const tituloMostpopular = document.getElementById('title_most')
 
 const rendersection = menu => {
     return `
@@ -23,19 +23,28 @@ const selectCategories = (e) => {
     menuPorCategoria = menu.filter(categoria => categoria.cat === tag);
     console.log(menuPorCategoria)
     if (menuPorCategoria.length > 0) {
+        console.log(tituloMostpopular)
+        tituloMostpopular.textContent = tag
         mostPopular.innerHTML = menuPorCategoria.map(prod => renderPopular(prod)).join('')
     } else {
+        tituloMostpopular.textContent = ""
         mostPopular.innerHTML = renderError()
         setTimeout(() => {
             mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
-
-        }, 5000);
+        }, 50000);
     }
 }
 
 const renderError = () => {
     return `
-        <h1>Disculpe, no contamos con este producto momentaneamente</h1>
+    <div class = "card card_most_popular" >
+   
+    
+             <h1>Disculpe, no contamos con este producto momentaneamente</h1>
+       
+   
+    </div>
+   
     `
 }
 
@@ -47,7 +56,7 @@ const renderCategories = cat => {
                         <img class="img_icon icon_categories" data-id = "${cat.name}" src=${cat.img} alt="">
                 </div>
                 <img class="img_icon icon_blur" src=${cat.img} alt="">
-                <p class="subtitle_card subtitle_categories">${cat.name}</p>
+                <p class="subtitle_card subtitle_categories" data-id = "${cat.name}">${cat.name}</p>
                 <span class="line_categories"></span>
             </div>
     `
