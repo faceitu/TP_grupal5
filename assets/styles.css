@@ -132,6 +132,15 @@ body {
     font-weight: 700;
 }
 
+.cant_container {
+    position: absolute;
+}
+
+.carrito_container {
+    position: relative;
+    left: -50;
+}
+
 .card {
     background: #252525;
     box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.9);
@@ -159,6 +168,7 @@ body {
     padding-right: 16px;
     font-size: 12px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .text_card {

@@ -1,12 +1,12 @@
-const finding = document.getElementById('container_recomndation');
+const finding = document.getElementById('container_recomendation');
 const categorie = document.querySelector('.container_categories');
 const mostPopular = document.getElementById('container_most_popular');
 const btnCall = document.querySelectorAll('btn_card');
 const tituloMostpopular = document.getElementById('title_most')
+const cantProductos = document.querySelector('.cant_carrito')
 
 const rendersection = menu => {
     return `
-
         <div class = "card card_recomendation" >
             <img  class = "img" src = "${menu.img}" >
             <div class = "text_card" >
@@ -14,7 +14,7 @@ const rendersection = menu => {
                 <p class = "subtitle_card" >${menu.data}</p> 
                 <span class="price_card"> ${menu.precio} </span> 
             </div> 
-            <a href class= "btn btn_card" > Agregar </a> 
+            <button class="btn btn_card" id= "btn_add" data-id = ${menu.id} >Agregar</button>
         </div> `
 };
 
@@ -83,6 +83,7 @@ const addCarrito = (e) => {
         const producto = menu.find(item => item.id === Number(tag))
         carrito = [...carrito, producto]
         console.log(carrito)
+        cantProductos.textContent = carrito.length
     } else {
         return
     }
@@ -94,6 +95,7 @@ const addCarrito = (e) => {
 
 const renderPage = () => {
     mostPopular.addEventListener('click', addCarrito)
+    finding.addEventListener('click', addCarrito)
     populars = menu.filter(prod => prod.popular === true);
     recomendada = menu.filter(prod => prod.recomendada === true);
     finding.innerHTML = populars.map(prod => rendersection(prod)).join('')
