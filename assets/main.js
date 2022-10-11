@@ -4,11 +4,6 @@ const mostPopular = document.getElementById('container_most_popular');
 const btnCall = document.querySelectorAll('btn_card');
 
 
-
-
-
-
-
 const rendersection = menu => {
     return `
 
@@ -23,12 +18,32 @@ const rendersection = menu => {
         </div> `
 };
 
-const renderCategories = cat => {
+const selectCategories = (e) => {
+    tag = e.target.getAttribute('data-id')
 
-    return `<div class="card card_categories">
+
+    menuPorCategoria = menu.filter(categoria => categoria.cat === tag);
+    console.log(menuPorCategoria)
+    if (menuPorCategoria.length > 0) {
+        mostPopular.innerHTML = menuPorCategoria.map(prod => renderPopular(prod)).join('')
+    } else {
+        mostPopular.innerHTML = renderError()
+    }
+
+}
+
+const renderError = () => {
+    return `
+        <h1>Disculpe, no contamos con este producto momentaneamente</h1>
+    `
+}
+
+const renderCategories = cat => {
+    categorie.addEventListener('click', selectCategories)
+    return `<div class="card card_categories" data-id = "${cat.name}">
                 <!-- Template para JS Categorias -->
                 <div class="icon_img_card">
-                        <img class="img_icon icon_categories" src=${cat.img} alt="">
+                        <img class="img_icon icon_categories" data-id = "${cat.name}" src=${cat.img} alt="">
                 </div>
                 <img class="img_icon icon_blur" src=${cat.img} alt="">
                 <p class="subtitle_card subtitle_categories">${cat.name}</p>
@@ -62,8 +77,6 @@ const renderPage = () => {
     mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
 
 }
-
-
 
 const init = () => {
     window.addEventListener('DOMContentLoaded', renderPage);
