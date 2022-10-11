@@ -60,6 +60,7 @@ const renderCategories = cat => {
 };
 
 const renderPopular = (prod) => {
+
     return `
     <div class = "card card_most_popular" >
     <img class = "img_popular" src="${prod.img}" alt="">
@@ -69,14 +70,30 @@ const renderPopular = (prod) => {
             <p class="subtitle_card"> ${prod.data}</p>
             <span class="price_card"> ${prod.precio}</span>
         </div>
-        <a href class="btn btn_card"> Agregar </a>
+        <button class="btn btn_card" id= "btn_add" data-id = ${prod.id} >Agregar</button>
     </div>
     </div>
      `
 }
 
+const addCarrito = (e) => {
+
+    if (e.target.nodeName === "BUTTON") {
+        tag = e.target.getAttribute('data-id')
+        const producto = menu.find(item => item.id === Number(tag))
+        carrito = [...carrito, producto]
+        console.log(carrito)
+    } else {
+        return
+    }
+}
+
+
+
+
 
 const renderPage = () => {
+    mostPopular.addEventListener('click', addCarrito)
     populars = menu.filter(prod => prod.popular === true);
     recomendada = menu.filter(prod => prod.recomendada === true);
     finding.innerHTML = populars.map(prod => rendersection(prod)).join('')

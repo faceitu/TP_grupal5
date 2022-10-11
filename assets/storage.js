@@ -1,3 +1,6 @@
+let carrito = [];
+
+
 const categories = [{
         name: 'Pizza',
         img: './assets/img/Categories/icon_pizza.png'
