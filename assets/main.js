@@ -20,16 +20,17 @@ const rendersection = menu => {
 
 const selectCategories = (e) => {
     tag = e.target.getAttribute('data-id')
-
-
     menuPorCategoria = menu.filter(categoria => categoria.cat === tag);
     console.log(menuPorCategoria)
     if (menuPorCategoria.length > 0) {
         mostPopular.innerHTML = menuPorCategoria.map(prod => renderPopular(prod)).join('')
     } else {
         mostPopular.innerHTML = renderError()
-    }
+        setTimeout(() => {
+            mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
 
+        }, 5000);
+    }
 }
 
 const renderError = () => {
