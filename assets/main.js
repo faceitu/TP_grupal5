@@ -28,9 +28,7 @@ const selectCategories = (e) => {
     } else {
         tituloMostpopular.textContent = ""
         mostPopular.innerHTML = renderError()
-        setTimeout(() => {
-            mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
-        }, 5000);
+
     }
 }
 

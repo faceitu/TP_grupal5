@@ -144,9 +144,9 @@ const menu =
         },
         {
             id: 12,
-            name: 'La rompe higados',
+            name: 'Rompe higados',
             precio: '$2360',
-            data: 'Va con un hepatalgina',
+            data: 'Va con hepatalgina',
             img: './assets/img/burguers/rompehigados.jpg',
             cat: 'Hamburguesas',
             popular: false,
