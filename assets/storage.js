@@ -1,5 +1,5 @@
 const categories = [{
-        name: 'Pizzas',
+        name: 'Pizza',
         img: './assets/img/Categories/icon_pizza.png'
     },
     {
@@ -138,7 +138,7 @@ const menu =
             precio: '$360',
             data: 'Van como piña',
             img: './assets/img/menu_reco3.jpg',
-            cat: 'Papas',
+            cat: 'Napapuki',
             popular: true,
             recomendada: false
         },
@@ -148,7 +148,7 @@ const menu =
             precio: '$2360',
             data: 'Va con un hepatalgina',
             img: './assets/img/burguers/rompehigados.jpg',
-            cat: 'hamburguesa',
+            cat: 'Hamburguesas',
             popular: false,
             recomendada: true
         },
@@ -158,7 +158,7 @@ const menu =
             precio: '$2110',
             data: 'Refrescante',
             img: './assets/img/burguers/primavera.jpg',
-            cat: 'hamburguesa',
+            cat: 'Hamburguesas',
             popular: false,
             recomendada: false
         },
@@ -168,7 +168,7 @@ const menu =
             precio: '$2520',
             data: 'Delicia de la casa',
             img: './assets/img/burguers/triple-cheddar.jpeg',
-            cat: 'hamburguesa',
+            cat: 'Hamburguesas',
             popular: true,
             recomendada: false
         },
@@ -178,7 +178,7 @@ const menu =
             precio: '$920',
             data: 'Explocion galactica',
             img: './assets/img/papas/cheddar-verdeo.png',
-            cat: 'Papas',
+            cat: 'Napapuki',
             popular: false,
             recomendada: false
         },
@@ -188,7 +188,7 @@ const menu =
             precio: '$1050',
             data: 'A otra dimencion',
             img: './assets/img/papas/papas-barbacoa.jpg',
-            cat: 'Papas',
+            cat: 'Napapuki',
             popular: false,
             recomendada: true
         },
@@ -198,7 +198,7 @@ const menu =
             precio: '$1150',
             data: 'Tormenta nebular',
             img: './assets/img/papas/papas-beacon.jpg',
-            cat: 'Papas',
+            cat: 'Napapuki',
             popular: false,
             recomendada: false
         },
@@ -208,7 +208,7 @@ const menu =
             precio: '$1310',
             data: 'Cadenas de andromeda',
             img: './assets/img/wraps/wrap-vegetales.jpg',
-            cat: 'wraps',
+            cat: 'Wraps',
             popular: false,
             recomendada: true
         },
@@ -218,7 +218,7 @@ const menu =
             precio: '$1410',
             data: 'Polvo de diamante',
             img: './assets/img/wraps/wrap-italiano.jpg',
-            cat: 'wraps',
+            cat: 'Wraps',
             popular: false,
             recomendada: false
         },
@@ -228,7 +228,7 @@ const menu =
             precio: '$1190',
             data: 'Gran cuerno',
             img: './assets/img/wraps/wrap-pollo.jpg',
-            cat: 'wraps',
+            cat: 'Wraps',
             popular: false,
             recomendada: true
         },
@@ -238,7 +238,7 @@ const menu =
             precio: '$1990',
             data: 'Espada escalubur',
             img: './assets/img/tacos/taco-asado.jpg',
-            cat: 'tacos',
+            cat: 'Mexican food',
             popular: false,
             recomendada: true
         },
@@ -248,7 +248,7 @@ const menu =
             precio: '$1770',
             data: 'Ejecucion aurora',
             img: './assets/img/tacos/taco-cerdo.jpg',
-            cat: 'tacos',
+            cat: 'Mexican food',
             popular: false,
             recomendada: false
         },
@@ -258,12 +258,9 @@ const menu =
             precio: '$1770',
             data: 'Rosas pirañas',
             img: './assets/img/tacos/taco-primavera.jpg',
-            cat: 'tacos',
+            cat: 'Mexican food',
             popular: false,
             recomendada: false
         },
 
     ]
-
-
-    
