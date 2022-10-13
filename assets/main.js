@@ -3,7 +3,7 @@ const categorie = document.querySelector('.container_categories');
 const mostPopular = document.getElementById('container_most_popular');
 const btnCall = document.querySelectorAll('btn_card');
 const tituloMostpopular = document.getElementById('title_most')
-const cantProductos = document.querySelector('.cant_carrito')
+const cantProductos = document.querySelector('.counter_cart')
 
 const rendersection = menu => {
     return `
@@ -34,12 +34,9 @@ const selectCategories = (e) => {
 
 const renderError = () => {
     return `
-    <div class = "card card_most_popular" >
-   
-    
-             <h1>Disculpe, no contamos con este producto momentaneamente</h1>
-       
-   
+    <div class = "product_not_found" >
+        <i class="icon_not_found fas fa-exclamation-triangle"></i>
+        <h2 class="text_not_found">Disculpe, no contamos con este producto momentaneamente</h2>
     </div>
    
     `

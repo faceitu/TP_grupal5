@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E5 - Proyecto Grupal</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
@@ -17,10 +19,45 @@
             </div>
             <div class="navbar_menu">
                 <span class="btn_home"><img src="./assets/img/Home.png" alt="Inicio">Home</span>
-                <div class="carrito_container">
+                <div class="cart_container">
                     <img src="./assets/img/Fill 7.png" alt="carrito icono">
-                    <span class="cant_carrito">0</span>
+                    <div class="counter_cart">0</div>
                 </div>
+                <!--Carrito menu abierto hay que sacar por JS la clase open_cart para ocultar y abrir el carrito-->
+                <div class="cart open_cart">
+                    <div class="close_cart">
+                        <button class="btn btn_card btn_close">x</button>
+                    </div>
+                    <h2 class="title_cart">Tus Productos</h2>
+          
+                    <div class="cart-container"></div>
+
+                    <div class="sub_cart_container">
+                        <div class="cart_subtotal">
+                            <p class="text_sub_cart">Subtotal:</p>
+                        <span class="text_sub_cart">$4890</span>
+                        </div>
+                        <div class="cart_subtotal">
+                            <p class="text_sub_cart">Subtotal:</p>
+                        <span class="text_sub_cart">$4890</span>
+                        </div>
+                    </div>
+          
+                    <span class="divider"></span>
+
+                    <div class="cart_total">
+                    <p class="title_cart">Total:</p>
+                    <span class="total_cart">$4890</span>
+                    </div>
+                    <div class="btn_container_cart">
+                        <button class="btn btn_card btn_buy">Comprar</button>
+                        <span>Ver más Productos</span>
+                    </div>
+                </div>
+          
+                <div class="overlay"></div>
+                  <!---------->
+
                 <div class="user">
                     <img src="./assets/img/Fill 4.png" alt="">
                     <img src="./assets/img/Fill 1.png" alt="">
@@ -68,7 +105,7 @@
 
                 </div>
 
-
+                
                 <!--Template card populares-->
 
             </div>
