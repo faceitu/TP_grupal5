@@ -5,6 +5,12 @@ const btnCall = document.querySelectorAll('btn_card');
 const tituloMostpopular = document.getElementById('title_most')
 const cantProductos = document.querySelector('.counter_cart')
 
+/* Carrito de compras */
+const overlay = document.querySelector('.overlay');
+const cartMenu = document.querySelector('.cart');
+const btnClose = document.querySelector('.btn_close')
+const cartBtn = document.querySelector('.cart_container');
+
 const rendersection = menu => {
     return `
         <div class = "card card_recomendation" >
@@ -101,8 +107,34 @@ const renderPage = () => {
 
 }
 
+
+/*CARRITO FUNCIONES*/
+const toggleCart = () => {
+    cartMenu.classList.remove('hidden');
+    cartMenu.classList.toggle('open_cart');
+    overlay.classList.toggle('show_overlay');
+};
+
+const closeCart = () => {
+    cartMenu.classList.remove('open_cart');
+    overlay.classList.remove('show_overlay');
+};
+
+const closeOnScroll = () => {
+    if (
+    !cartMenu.classList.contains('open_cart')
+    )
+    return;
+
+    cartMenu.classList.remove('open_cart');
+    overlay.classList.remove('show_overlay');
+};
+
 const init = () => {
     window.addEventListener('DOMContentLoaded', renderPage);
+    cartBtn.addEventListener('click', toggleCart);
+    btnClose.addEventListener('click', closeCart);
+    window.addEventListener('scroll', closeOnScroll);
 }
 
 

@@ -1,0 +1,9 @@
+/*TABLETS*/
+
+@media (max-width: 768px){
+    .hero_right {
+        display: none;
+    }
+}
+
+/*CELLPHONES*/
