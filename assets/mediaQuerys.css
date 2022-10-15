@@ -1,8 +1,49 @@
 /*TABLETS*/
 
 @media (max-width: 768px){
+    body{
+        width: 100%;
+    }
+    
+    .cart{
+    display: none;
+    }
+    .hero{
+        display: flex;
+    }
     .hero_right {
         display: none;
+    }
+    .hero_slogan{
+        text-align: center;
+    }
+    .footer_links{
+        flex-direction: column;
+        text-align: center;
+    }
+    .title_section_h3 .title_categories{
+        text-align: center;
+    }
+    .title_categories{
+        text-align: center;
+    }
+    .title_section_h3{
+    text-align: center;
+    }
+    .container_categories{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card:hover {
+        opacity: 0.9;
+        background-color: #2e2c2c;
+        transform: none
+    }
+
+    .navbar_menu {
+        display: none
+        
     }
 }
 
