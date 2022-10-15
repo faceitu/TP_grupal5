@@ -330,11 +330,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px 15px;
+    gap: 0.7em;
+    padding: 1px 5px;
     color: #FFFFFF;
     transition: all .2s ease-in-out;
 }
+
 
 .card:hover {
     opacity: 0.9;
@@ -348,9 +349,10 @@ main{
     padding-top: 8px;
     padding-left: 16px;
     padding-right: 16px;
-    font-size: 12px;
+    font-size: 70%;
     font-weight: 600;
     cursor: pointer;
+    width: 85px;
     
 }
 
@@ -373,8 +375,9 @@ main{
 .text_card {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    width: 60%;
+    gap: 2px;
+    width: 100%;
+
 }
 
 .title_card {
@@ -383,15 +386,18 @@ main{
 }
 
 .subtitle_card {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     opacity: 0.3;
     line-height: 17px;
+    width: 90%;
+    letter-spacing: 0.5px;
 }
 
 .price_card {
     font-size: 19px;
     font-weight: 700;
+    line-height: 131.02%;
     background: linear-gradient(58.81deg, var(--gradient1) -1%, var(--gradient2) 53%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -400,7 +406,7 @@ main{
 
 
 .title_section_h3 {
-    font-size: 22px;
+    font-size: 2em;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -420,7 +426,8 @@ main{
 
 .img_popular {
     border-radius: 16px;
-    width: 237px;
+    width: 90%;
+    /* max-width: 237px; */
     height: 97px;
 }
 
@@ -435,12 +442,24 @@ main{
 }
 
 .card_recomendation {
+    display: flex;
+    align-items: center;
     width: 347px;
     height: 103px;
+    max-width: 85%;
 }
 
+.tittle_card{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 131.02%;
+}
+
+
 .recomendation{
-    width: 85%;
+    display: flex;
+    width: 99%;
+
 }
 
 .card_categories {
@@ -476,6 +495,7 @@ main{
 .subtitle_categories {
     font-weight: 400;
     opacity: 1;
+    text-align: center;
 }
 
 .line_categories {
@@ -491,9 +511,11 @@ main{
     justify-content: center;
     align-items: center;
     gap: 15px;
+    
 }
 
 .icon_not_found, .text_not_found{
+    text-align: center;
     font-size: 30px;
     color: var(--amarillo);
 
@@ -510,9 +532,8 @@ main{
 
 .card_most_popular {
     flex-direction: column;
-    width: 265px;
-    height: 213px;
-    
+    width: 282px;
+    height: 213px;    
 }
 
 #container_most_popular {
@@ -524,8 +545,9 @@ main{
 .container_text_popular {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 40%;
 }
 
 .most_popular{

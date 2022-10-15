@@ -68,8 +68,8 @@ const renderPopular = (prod) => {
     <div class = "card card_most_popular" >
     <img class = "img_popular" src="${prod.img}" alt="">
     <div class="container_text_popular">
-        <div class="text_card">
-            <span class="tittle_card">${prod.name} </span>
+    <div class="text_card">
+    <span class="tittle_card">${prod.name} </span>
             <p class="subtitle_card"> ${prod.data}</p>
             <span class="price_card"> ${prod.precio}</span>
         </div>

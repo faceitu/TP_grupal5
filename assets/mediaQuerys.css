@@ -4,7 +4,9 @@
     body{
         width: 100%;
     }
-    
+    .hero {
+        margin-top: 20%;
+    }
     .cart{
     display: none;
     }
@@ -44,6 +46,18 @@
     .navbar_menu {
         display: none
         
+    }
+
+    .card_recomendation {
+        width: 307px;
+        height: 103px;
+    } 
+
+
+    .icon_not_found, .text_not_found{
+        font-size: 25px;
+        text-align: center;
+    
     }
 }
 
