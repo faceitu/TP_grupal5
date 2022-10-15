@@ -8,7 +8,7 @@
 }
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
 
@@ -24,7 +24,6 @@ h2 {
 
 body {
     background-color: #131415;
-    width: 100%;
     color: var(--blanco);
 }
 
@@ -45,7 +44,7 @@ section {
     margin: 0 auto;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +60,6 @@ main{
     justify-content: space-around;
     padding: 0px 10px 0px 10px;
     background-color: #13151d8f;
-    
 }
 
 .section {
@@ -73,7 +71,7 @@ main{
     justify-content: center;
 }
 
-.navbar_container{
+.navbar_container {
     max-width: 1200px;
     height: 100px;
     margin: 0 auto;
@@ -89,8 +87,6 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
 }
 
 .navbar_menu {
@@ -98,16 +94,15 @@ main{
     justify-content: center;
     align-items: center;
     gap: 55px;
-
 }
 
-.cart_container{
+.cart_container {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.counter_cart{
+.counter_cart {
     background-color: var(--gradient2);
     outline: 1px solid #FFFFFF;
     border-radius: 50%;
@@ -120,20 +115,18 @@ main{
     position: absolute;
     left: 15px;
     top: -5px;
-    
 }
+
 
 /*carrito*/
 
-
 .cart {
-    
     position: absolute;
     background: #252525;
     border-radius: 0 0 0 15px;
     top: 0;
     right: 0;
-    padding: 50px 30px;    
+    padding: 50px 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -143,14 +136,12 @@ main{
     min-width: 375px;
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-    
 }
 
 .cart_container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
 }
 
 .cart_total {
@@ -160,35 +151,34 @@ main{
     width: 100%;
 }
 
-.title_cart{
+.title_cart {
     font-size: 22px;
     font-weight: 500;
 }
 
-.total_cart{
+.total_cart {
     color: var(--amarillo);
     font-size: 22px;
     font-weight: 700;
 }
 
-.sub_cart_container{
+.sub_cart_container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.cart_subtotal{
+.cart_subtotal {
     display: flex;
     justify-content: space-between;
-    
 }
 
-.text_sub_cart{
+.text_sub_cart {
     font-size: 14px;
     font-weight: 500;
 }
 
-.btn_container_cart{
+.btn_container_cart {
     display: flex;
     flex-direction: column;
     padding: 0 30px;
@@ -203,14 +193,20 @@ main{
     width: 100%;
 }
 
+
 /*Toggle del carro*/
+
+.img_carrito {
+    cursor: pointer;
+}
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(5px);
@@ -225,7 +221,6 @@ main{
 .open_cart {
     transform: translate(0%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
-
 }
 
 .cart::-webkit-scrollbar {
@@ -256,7 +251,6 @@ main{
     gap: 35px;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .hero_slogan {
@@ -267,7 +261,6 @@ main{
 }
 
 .hero_animation {
-    
     /*animacion - duración - animation-function - forwards para que quede fijo al final.*/
     animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
     animation-delay: 0.2s;
@@ -356,7 +349,7 @@ main{
     
 }
 
-.btn_buy{
+.btn_buy {
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
@@ -364,12 +357,11 @@ main{
     border-radius: 15px;
 }
 
-.btn_close{
+.btn_close {
     border-radius: 4px;
     margin-bottom: 20px;
     cursor: pointer;
     padding: 5px 10px;
-    
 }
 
 .text_card {
@@ -402,8 +394,6 @@ main{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-
-
 
 .title_section_h3 {
     font-size: 2em;
@@ -505,7 +495,7 @@ main{
     border-radius: 15px;
 }
 
-.product_not_found{
+.product_not_found {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -518,14 +508,11 @@ main{
     text-align: center;
     font-size: 30px;
     color: var(--amarillo);
-
 }
 
-.icon_not_found{
+.icon_not_found {
     font-size: 60px;
 }
-
-
 
 
 /*POPULAR*/
@@ -550,9 +537,10 @@ main{
     height: 40%;
 }
 
-.most_popular{
+.most_popular {
     width: 85%;
 }
+
 
 /*FOOTER*/
 
@@ -591,18 +579,18 @@ main{
 
 @keyframes fade {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
-  @keyframes slide-right {
+@keyframes slide-right {
     from {
-      transform: translateX(100px);
+        transform: translateX(100px);
     }
     to {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
