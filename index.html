@@ -6,69 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E5 - Proyecto Grupal</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="stylesheet" href="./assets/mediaQuerys.css">
 </head>
 
 <body>
-    
-        <header class="navbar_container">
-            
-                <div class="logo">
-                    <img src="./assets/img/nucbazappiicon.png" alt="">
+
+    <header class="navbar_container">
+
+        <div class="logo">
+            <img src="./assets/img/nucbazappiicon.png" alt="">
+        </div>
+        <nav class="navbar_menu">
+            <span class="btn_home"><img src="./assets/img/Home.png" alt="Inicio">Home</span>
+            <div class="cart_container">
+                <img class="img_carrito" src="./assets/img/Fill 7.png" alt="carrito icono">
+                <div class="counter_cart">0</div>
+            </div>
+            <!--Carrito menu abierto hay que sacar por JS la clase open_cart para ocultar y abrir el carrito-->
+            <div class="cart hidden">
+                <div class="close_cart">
+                    <button class="btn btn_close">X</button>
                 </div>
-                <nav class="navbar_menu">
-                    <span class="btn_home"><img src="./assets/img/Home.png" alt="Inicio">Home</span>
-                    <div class="cart_container">
-                        <img src="./assets/img/Fill 7.png" alt="carrito icono">
-                        <div class="counter_cart">0</div>
+                <h2 class="title_cart">Tus Productos</h2>
+
+                <div class="cart-container"></div>
+
+                <div class="sub_cart_container">
+                    <div class="cart_subtotal">
+                        <p class="text_sub_cart">Subtotal:</p>
+                        <span class="text_sub_cart">$4890</span>
                     </div>
-                    <!--Carrito menu abierto hay que sacar por JS la clase open_cart para ocultar y abrir el carrito-->
-                    <div class="cart hidden">
-                        <div class="close_cart">
-                            <button class="btn btn_close">X</button>
-                        </div>
-                        <h2 class="title_cart">Tus Productos</h2>
-            
-                        <div class="cart-container"></div>
-
-                        <div class="sub_cart_container">
-                            <div class="cart_subtotal">
-                                <p class="text_sub_cart">Subtotal:</p>
-                            <span class="text_sub_cart">$4890</span>
-                            </div>
-                            <div class="cart_subtotal">
-                                <p class="text_sub_cart">Subtotal:</p>
-                            <span class="text_sub_cart">$4890</span>
-                            </div>
-                        </div>
-            
-                        <span class="divider"></span>
-
-                        <div class="cart_total">
-                        <p class="title_cart">Total:</p>
-                        <span class="total_cart">$4890</span>
-                        </div>
-                        <div class="btn_container_cart">
-                            <button class="btn btn_buy">Comprar</button>
-                            <span>Ver más Productos</span>
-                        </div>
+                    <div class="cart_subtotal">
+                        <p class="text_sub_cart">Subtotal:</p>
+                        <span class="text_sub_cart">$4890</span>
                     </div>
-            
-                    <div class="overlay"></div>
-                    <!---------->
+                </div>
 
-                    <div class="user">
-                        <img src="./assets/img/Fill 4.png" alt="">
-                        <img src="./assets/img/Fill 1.png" alt="">
-                    </div>
+                <span class="divider"></span>
 
-                </nav>
-            
-        </header>
-    
+                <div class="cart_total">
+                    <p class="title_cart">Total:</p>
+                    <span class="total_cart">$4890</span>
+                </div>
+                <div class="btn_container_cart">
+                    <button class="btn btn_buy">Comprar</button>
+                    <span>Ver más Productos</span>
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+            <!---------->
+
+            <div class="user">
+                <img src="./assets/img/Fill 4.png" alt="">
+                <img src="./assets/img/Fill 1.png" alt="">
+            </div>
+
+        </nav>
+
+    </header>
+
     <main>
         <section class="section hero">
             <div class="hero_slogan">
@@ -110,7 +109,7 @@
 
                 </div>
 
-                
+
                 <!--Template card populares-->
 
             </div>
@@ -123,7 +122,7 @@
                 <span>Soporte</span>
             </div>
             <div class="footer_copyright">
-                <p>Hecho con <i class="hearth">💗 </i>  en <strong class="strong_copy">NUCBAZAPPI</strong></p>
+                <p>Hecho con <i class="hearth">💗 </i> en <strong class="strong_copy">NUCBAZAPPI</strong></p>
             </div>
 
         </footer>
