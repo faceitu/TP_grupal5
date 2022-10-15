@@ -329,7 +329,6 @@ main {
     transition: all .2s ease-in-out;
 }
 
-
 .card:hover {
     opacity: 0.9;
     background-color: #2e2c2c;
@@ -346,7 +345,6 @@ main {
     font-weight: 600;
     cursor: pointer;
     width: 85px;
-    
 }
 
 .btn_buy {
@@ -369,7 +367,6 @@ main {
     flex-direction: column;
     gap: 2px;
     width: 100%;
-
 }
 
 .title_card {
@@ -439,17 +436,15 @@ main {
     max-width: 85%;
 }
 
-.tittle_card{
+.tittle_card {
     font-weight: 500;
     font-size: 15px;
     line-height: 131.02%;
 }
 
-
-.recomendation{
+.recomendation {
     display: flex;
     width: 99%;
-
 }
 
 .card_categories {
@@ -501,10 +496,10 @@ main {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    
 }
 
-.icon_not_found, .text_not_found{
+.icon_not_found,
+.text_not_found {
     text-align: center;
     font-size: 30px;
     color: var(--amarillo);
@@ -520,7 +515,7 @@ main {
 .card_most_popular {
     flex-direction: column;
     width: 282px;
-    height: 213px;    
+    height: 213px;
 }
 
 #container_most_popular {

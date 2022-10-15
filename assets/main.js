@@ -5,11 +5,13 @@ const btnCall = document.querySelectorAll('btn_card');
 const tituloMostpopular = document.getElementById('title_most')
 const cantProductos = document.querySelector('.counter_cart')
 
+
 /* Carrito de compras */
 const overlay = document.querySelector('.overlay');
 const cartMenu = document.querySelector('.cart');
 const btnClose = document.querySelector('.btn_close')
 const cartBtn = document.querySelector('.cart_container');
+
 
 const rendersection = menu => {
     return `
@@ -23,6 +25,7 @@ const rendersection = menu => {
             <button class="btn btn_card" id= "btn_add" data-id = ${menu.id} >Agregar</button>
         </div> `
 };
+
 
 const selectCategories = (e) => {
     tag = e.target.getAttribute('data-id')
@@ -106,14 +109,33 @@ const renderPage = () => {
     mostPopular.innerHTML = recomendada.map(prod => renderPopular(prod)).join('')
 
 }
-
+const renderCompra = (menu) => {
+    console.log(menu)
+    return `<div class = "card card_recomendation" >
+             <img  class = "img" src = "${menu.img}" >
+            <div class = "text_card" >
+                <span class = "tittle_card" > ${menu.name} </span> 
+                <p class = "subtitle_card" >${menu.data}</p> 
+                <span class="price_card"> ${menu.precio} </span> 
+            </div> 
+            </div> 
+            `
+}
 
 /*CARRITO FUNCIONES*/
 const toggleCart = () => {
     cartMenu.classList.remove('hidden');
     cartMenu.classList.toggle('open_cart');
     overlay.classList.toggle('show_overlay');
-};
+    const sellCart = document.getElementById('sell_cart')
+
+    console.log(sellCart)
+    sellCart.innerHTML = carrito.map(prod =>
+        renderCompra(prod)).join('')
+
+}
+
+
 
 const closeCart = () => {
     cartMenu.classList.remove('open_cart');
@@ -121,10 +143,8 @@ const closeCart = () => {
 };
 
 const closeOnScroll = () => {
-    if (
-    !cartMenu.classList.contains('open_cart')
-    )
-    return;
+    if (!cartMenu.classList.contains('open_cart'))
+        return;
 
     cartMenu.classList.remove('open_cart');
     overlay.classList.remove('show_overlay');
