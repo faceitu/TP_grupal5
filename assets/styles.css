@@ -7,6 +7,11 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 h1 {
     font-size: 66px;
     font-weight: 700;
@@ -47,6 +52,16 @@ main {
     align-items: center;
 }
 
+.header {
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+    background-color: #13151d8f;
+}
+
 .section {
     margin-top: 80px;
     margin-left: 20px;
@@ -78,7 +93,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 55px;
 }
 
 .cart_container {
@@ -215,7 +230,7 @@ main {
 .btn_home {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 0px;
     font-size: 12px;
     font-weight: 400;
 }
@@ -231,6 +246,7 @@ main {
 
 .hero {
     margin-top: 100px;
+    display: flex;
     flex-direction: row;
     gap: 35px;
     justify-content: space-between;
@@ -349,7 +365,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 100%;
+    width: 60%;
 }
 
 .title_card {
@@ -494,6 +510,10 @@ main {
     width: 100%;
 }
 
+.most_popular {
+    width: 85%;
+}
+
 
 /*FOOTER*/
 
@@ -506,7 +526,7 @@ main {
 
 .footer_links {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     font-size: 17px;
     font-weight: 400;
 }
