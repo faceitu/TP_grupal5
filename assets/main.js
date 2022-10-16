@@ -103,7 +103,7 @@ const addCarrito = (e) => {
         let existente = carrito.find(prod => prod.id === producto.id)
 
 
-        if (!existente) {
+        if (!existente & tag2 != 'resta') {
             producto.cant = 1
             carrito = [...carrito, producto]
 
@@ -115,10 +115,7 @@ const addCarrito = (e) => {
                     carrito[index] = existente
                 } else {
                     const index = carrito.findIndex((element) => element.id === existente.id);
-
                     carrito.splice(index, index + 1)
-
-
 
                 }
 
