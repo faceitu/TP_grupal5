@@ -31,7 +31,7 @@ const selectCategories = (e) => {
     tag = e.target.getAttribute('data-id')
     menuPorCategoria = menu.filter(categoria => categoria.cat === tag);
     if (menuPorCategoria.length > 0) {
-        console.log(tituloMostpopular)
+
         tituloMostpopular.textContent = tag
         mostPopular.innerHTML = menuPorCategoria.map(prod => renderPopular(prod)).join('')
     } else {
@@ -87,9 +87,21 @@ const addCarrito = (e) => {
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
         const producto = menu.find(item => item.id === Number(tag))
-        carrito = [...carrito, producto]
-        console.log(carrito)
+        let existente = carrito.find(prod => prod.id === producto.id)
+
+        if (!existente) {
+            producto.cant = 1
+            carrito = [...carrito, producto]
+
+
+        } else {
+            existente.cant = existente.cant + 1
+            const index = carrito.findIndex((element) => element.id === existente.id);
+            carrito[index] = existente
+        }
+
         cantProductos.textContent = carrito.length
+        console.log(carrito)
     } else {
         return
     }
@@ -110,14 +122,16 @@ const renderPage = () => {
 
 }
 const renderCompra = (menu) => {
-    console.log(menu)
-    return `<div class = "card card_recomendation" >
+    return `<div class = "card buy_cart" >
              <img  class = "img" src = "${menu.img}" >
             <div class = "text_card" >
                 <span class = "tittle_card" > ${menu.name} </span> 
                 <p class = "subtitle_card" >${menu.data}</p> 
                 <span class="price_card"> ${menu.precio} </span> 
             </div> 
+            <button class = "btn btn_card">-</button>
+            <span>${menu.cant}</span>
+            <button class = "btn btn_card">+</button>
             </div> 
             `
 }

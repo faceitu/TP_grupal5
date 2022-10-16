@@ -120,6 +120,10 @@ main {
 
 /*carrito*/
 
+.buy_cart {
+    margin-bottom: 20px;
+}
+
 .cart {
     position: absolute;
     background: #252525;
