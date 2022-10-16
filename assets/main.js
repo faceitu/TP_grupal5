@@ -13,6 +13,10 @@ const btnClose = document.querySelector('.btn_close')
 const cartBtn = document.querySelector('.cart_container');
 
 
+
+
+
+
 const rendersection = menu => {
     return `
         <div class = "card card_recomendation" >
@@ -81,27 +85,54 @@ const renderPopular = (prod) => {
     </div>
      `
 }
+const cantTotalproductos = () => {
+    let totalProductos = 0
+    carrito.forEach(prod =>
+        totalProductos = totalProductos + prod.cant
 
+
+    )
+    return totalProductos
+}
 const addCarrito = (e) => {
-
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
+        tag2 = e.target.getAttribute('data-resta')
+
         const producto = menu.find(item => item.id === Number(tag))
         let existente = carrito.find(prod => prod.id === producto.id)
+
 
         if (!existente) {
             producto.cant = 1
             carrito = [...carrito, producto]
 
-
         } else {
-            existente.cant = existente.cant + 1
-            const index = carrito.findIndex((element) => element.id === existente.id);
-            carrito[index] = existente
+            if (tag2 === 'resta') {
+                if (existente.cant > 1) {
+                    existente.cant = existente.cant - 1
+                    const index = carrito.findIndex((element) => element.id === existente.id);
+                    carrito[index] = existente
+                } else {
+                    const index = carrito.findIndex((element) => element.id === existente.id);
+                    carrito.splice(index)
+                        ///const sellCart = document.getElementById('sell_cart')
+                        ///  sellCart.innerHTML = ""
+                    console.log(carrito)
+
+
+                }
+
+            } else {
+
+                existente.cant = existente.cant + 1
+                const index = carrito.findIndex((element) => element.id === existente.id);
+                carrito[index] = existente
+            }
         }
 
-        cantProductos.textContent = carrito.length
-        console.log(carrito)
+        cantProductos.textContent = cantTotalproductos()
+
     } else {
         return
     }
@@ -129,23 +160,27 @@ const renderCompra = (menu) => {
                 <p class = "subtitle_card" >${menu.data}</p> 
                 <span class="price_card"> ${menu.precio} </span> 
             </div> 
-            <button class = "btn btn_card">-</button>
+            <button class = "btn btn_card" data-id = ${menu.id} data-resta = "resta">-</button>
             <span>${menu.cant}</span>
-            <button class = "btn btn_card">+</button>
+            <button class = "btn btn_card" data-id = ${menu.id} >+</button>
             </div> 
             `
 }
-
-/*CARRITO FUNCIONES*/
+const hola = (e) => {
+        addCarrito(e)
+    }
+    /*CARRITO FUNCIONES*/
 const toggleCart = () => {
     cartMenu.classList.remove('hidden');
     cartMenu.classList.toggle('open_cart');
     overlay.classList.toggle('show_overlay');
     const sellCart = document.getElementById('sell_cart')
-
-    console.log(sellCart)
+    sellCart.addEventListener('click', hola)
     sellCart.innerHTML = carrito.map(prod =>
         renderCompra(prod)).join('')
+
+
+
 
 }
 
