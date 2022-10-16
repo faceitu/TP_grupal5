@@ -115,10 +115,9 @@ const addCarrito = (e) => {
                     carrito[index] = existente
                 } else {
                     const index = carrito.findIndex((element) => element.id === existente.id);
-                    carrito.splice(index)
-                        ///const sellCart = document.getElementById('sell_cart')
-                        ///  sellCart.innerHTML = ""
-                    console.log(carrito)
+
+                    carrito.splice(index, index + 1)
+
 
 
                 }
@@ -130,7 +129,7 @@ const addCarrito = (e) => {
                 carrito[index] = existente
             }
         }
-
+        console.log(carrito)
         cantProductos.textContent = cantTotalproductos()
 
     } else {
