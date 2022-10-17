@@ -86,6 +86,7 @@ const renderPopular = (prod) => {
     </div>
      `
 }
+
 const cantTotalproductos = () => {
     let totalProductos = 0
     carrito.forEach(prod =>
@@ -97,7 +98,10 @@ const cantTotalproductos = () => {
 }
 
 const setPrecio = (carrito) => {
-
+    pTotal = 0
+    carrito.forEach(prod => pTotal += (prod.precio * prod.cant))
+    console.log(pTotal)
+    return pTotal
 }
 
 
@@ -120,7 +124,7 @@ const addCarrito = (e) => {
             producto.cant = 1
             carrito = [...carrito, producto]
             saveCarrito(carrito)
-            setPrecio(carrito)
+
             precioTotal.textContent = setPrecio(carrito)
 
         } else {
@@ -134,14 +138,14 @@ const addCarrito = (e) => {
 
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
-                    setPrecio(carrito)
+
                     precioTotal.textContent = setPrecio(carrito)
                 } else {
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito = carrito.filter(prod => prod.id != existente.id)
 
                     const sellCart = document.getElementById('sell_cart')
-                    setPrecio(carrito)
+
                     precioTotal.textContent = setPrecio(carrito)
                     saveCarrito(carrito)
                     sellCart.innerHTML = carrito.map(prod =>
@@ -158,7 +162,7 @@ const addCarrito = (e) => {
                 carrito[index] = existente
                 const sellCart = document.getElementById('sell_cart')
                 saveCarrito(carrito)
-                setPrecio(carrito)
+
                 precioTotal.textContent = setPrecio(carrito)
                 sellCart.innerHTML = carrito.map(prod =>
                     renderCompra(prod)).join('')
@@ -207,6 +211,8 @@ const hola = (e) => {
     }
     /*CARRITO FUNCIONES*/
 const toggleCart = () => {
+    const precioTotal = document.getElementById('precio_total')
+    precioTotal.textContent = setPrecio(carrito)
     cartMenu.classList.remove('hidden');
     cartMenu.classList.toggle('open_cart');
     overlay.classList.toggle('show_overlay');
