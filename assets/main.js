@@ -96,14 +96,16 @@ const cantTotalproductos = () => {
 }
 const addCarrito = (e) => {
 
+
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
         tag2 = e.target.getAttribute('data-resta')
+        const counter_cart = document.getElementById('cant_item');
 
         const producto = menu.find(item => item.id === Number(tag))
         let existente = carrito.find(prod => prod.id === producto.id)
 
-
+        console.log(carrito)
         if (!existente & tag2 != 'resta') {
             producto.cant = 1
             carrito = [...carrito, producto]
@@ -112,12 +114,13 @@ const addCarrito = (e) => {
             if (tag2 === 'resta') {
                 if (existente.cant > 1) {
                     existente.cant = existente.cant - 1
+                        //    counter_cart.textContent = existente.cant
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
                 } else {
-                    console.log(carrito)
                     const index = carrito.findIndex((element) => element.id === existente.id);
-                    carrito.splice(index, index + 1)
+                    carrito = carrito.filter(prod => prod.id != existente.id)
+
                     const sellCart = document.getElementById('sell_cart')
                     console.log(carrito)
                     sellCart.innerHTML = carrito.map(prod =>
@@ -129,8 +132,10 @@ const addCarrito = (e) => {
             } else {
 
                 existente.cant = existente.cant + 1
+
                 const index = carrito.findIndex((element) => element.id === existente.id);
                 carrito[index] = existente
+
 
             }
         }
@@ -183,7 +188,6 @@ const toggleCart = () => {
     sellCart.addEventListener('click', hola)
     sellCart.innerHTML = carrito.map(prod =>
         renderCompra(prod)).join('')
-
 
 
 
