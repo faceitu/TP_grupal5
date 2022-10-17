@@ -95,6 +95,7 @@ const cantTotalproductos = () => {
     return totalProductos
 }
 const addCarrito = (e) => {
+
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
         tag2 = e.target.getAttribute('data-resta')
@@ -114,8 +115,14 @@ const addCarrito = (e) => {
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
                 } else {
+                    console.log(carrito)
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito.splice(index, index + 1)
+                    const sellCart = document.getElementById('sell_cart')
+                    console.log(carrito)
+                    sellCart.innerHTML = carrito.map(prod =>
+                        renderCompra(prod)).join('')
+
 
                 }
 
@@ -124,9 +131,10 @@ const addCarrito = (e) => {
                 existente.cant = existente.cant + 1
                 const index = carrito.findIndex((element) => element.id === existente.id);
                 carrito[index] = existente
+
             }
         }
-        console.log(carrito)
+
         cantProductos.textContent = cantTotalproductos()
 
     } else {
@@ -149,6 +157,7 @@ const renderPage = () => {
 
 }
 const renderCompra = (menu) => {
+
     return `<div class = "card buy_cart" >
              <img  class = "img" src = "${menu.img}" >
             <div class = "text_card" >
@@ -157,7 +166,7 @@ const renderCompra = (menu) => {
                 <span class="price_card"> ${menu.precio} </span> 
             </div> 
             <button class = "btn btn_card" data-id = ${menu.id} data-resta = "resta">-</button>
-            <span>${menu.cant}</span>
+            <span id = "cant_item" data-id = ${menu.id}>${menu.cant}</span>
             <button class = "btn btn_card" data-id = ${menu.id} >+</button>
             </div> 
             `
