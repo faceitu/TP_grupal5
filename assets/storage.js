@@ -1,5 +1,5 @@
-let carrito = [];
-
+let carrito = localStorage.getItem("compras") || []
+carrito = JSON.parse(carrito)
 
 const categories = [{
         name: 'Pizza',

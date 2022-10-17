@@ -13,8 +13,9 @@ const btnClose = document.querySelector('.btn_close')
 const cartBtn = document.querySelector('.cart_container');
 
 
-
-
+const saveCarrito = (carrito) => {
+    localStorage.setItem('compras', JSON.stringify(carrito))
+}
 
 
 const rendersection = menu => {
@@ -94,14 +95,23 @@ const cantTotalproductos = () => {
     )
     return totalProductos
 }
-const addCarrito = (e) => {
 
+const setPrecio = (carrito) => {
+
+}
+
+
+
+
+
+
+
+const addCarrito = (e) => {
+    const precioTotal = document.getElementById('precio_total')
 
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
         tag2 = e.target.getAttribute('data-resta')
-        const counter_cart = document.getElementById('cant_item');
-
         const producto = menu.find(item => item.id === Number(tag))
         let existente = carrito.find(prod => prod.id === producto.id)
 
@@ -109,20 +119,31 @@ const addCarrito = (e) => {
         if (!existente & tag2 != 'resta') {
             producto.cant = 1
             carrito = [...carrito, producto]
+            saveCarrito(carrito)
+            setPrecio(carrito)
+            precioTotal.textContent = setPrecio(carrito)
 
         } else {
             if (tag2 === 'resta') {
                 if (existente.cant > 1) {
                     existente.cant = existente.cant - 1
-                        //    counter_cart.textContent = existente.cant
+                    const sellCart = document.getElementById('sell_cart')
+                    saveCarrito(carrito)
+                    sellCart.innerHTML = carrito.map(prod =>
+                        renderCompra(prod)).join('')
+
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
+                    setPrecio(carrito)
+                    precioTotal.textContent = setPrecio(carrito)
                 } else {
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito = carrito.filter(prod => prod.id != existente.id)
 
                     const sellCart = document.getElementById('sell_cart')
-                    console.log(carrito)
+                    setPrecio(carrito)
+                    precioTotal.textContent = setPrecio(carrito)
+                    saveCarrito(carrito)
                     sellCart.innerHTML = carrito.map(prod =>
                         renderCompra(prod)).join('')
 
@@ -135,7 +156,12 @@ const addCarrito = (e) => {
 
                 const index = carrito.findIndex((element) => element.id === existente.id);
                 carrito[index] = existente
-
+                const sellCart = document.getElementById('sell_cart')
+                saveCarrito(carrito)
+                setPrecio(carrito)
+                precioTotal.textContent = setPrecio(carrito)
+                sellCart.innerHTML = carrito.map(prod =>
+                    renderCompra(prod)).join('')
 
             }
         }
@@ -213,6 +239,7 @@ const init = () => {
     cartBtn.addEventListener('click', toggleCart);
     btnClose.addEventListener('click', closeCart);
     window.addEventListener('scroll', closeOnScroll);
+    cantProductos.textContent = cantTotalproductos()
 }
 
 
