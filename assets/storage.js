@@ -1,3 +1,6 @@
+let carrito = JSON.parse(localStorage.getItem("compras")) || []
+
+
 const categories = [{
         name: 'Pizza',
         img: './assets/img/Categories/icon_pizza.png'
@@ -34,7 +37,7 @@ const menu =
     [{
             id: 1,
             name: 'La Mr. Pit',
-            precio: '$350',
+            precio: 350,
             data: 'solo para expertos',
             img: './assets/img/menu0.png',
             cat: 'Pizza',
@@ -45,7 +48,7 @@ const menu =
         {
             id: 2,
             name: '¡Q Jammone!',
-            precio: '$350',
+            precio: 350,
             data: 'c / jamon crudo ',
             img: './assets/img/menu1.png',
             cat: 'Pizza',
@@ -55,7 +58,7 @@ const menu =
         {
             id: 3,
             name: 'La Charly Garcia',
-            precio: '$380',
+            precio: 380,
             data: '¡Basta!',
             img: './assets/img/menu2.png',
             cat: 'Pizza',
@@ -65,7 +68,7 @@ const menu =
         {
             id: 4,
             name: 'La Maradona',
-            precio: '$450',
+            precio: 450,
             data: '¡Eterna!',
             img: './assets/img/menu4.png',
             cat: 'Pizza',
@@ -75,7 +78,7 @@ const menu =
         {
             id: 5,
             name: 'Picantovich',
-            precio: '$750',
+            precio: 750,
             data: 'Pica 2 veces',
             img: './assets/img/menu5.png',
             cat: 'Pizza',
@@ -85,7 +88,7 @@ const menu =
         {
             id: 6,
             name: 'La Hasbulla',
-            precio: '$990',
+            precio: 990,
             data: 'En honor al 1',
             img: './assets/img/menu6.png',
             cat: 'Pizza',
@@ -95,7 +98,7 @@ const menu =
         {
             id: 7,
             name: 'Leo Messi',
-            precio: '$10',
+            precio: 10,
             data: '¡De pie señores!',
             img: './assets/img/menu7.png',
             cat: 'Pizza',
@@ -105,7 +108,7 @@ const menu =
         {
             id: 8,
             name: 'Nick Gi',
-            precio: '$Gratis',
+            precio: 0,
             data: 'La que desaparece',
             img: './assets/img/menu4.png',
             cat: 'Pizza',
@@ -115,7 +118,7 @@ const menu =
         {
             id: 9,
             name: 'Bennazianna',
-            precio: '$3650',
+            precio: 3650,
             data: 'La mas completa',
             img: './assets/img/menu_reco1.jpg',
             cat: 'Pizza',
@@ -125,7 +128,7 @@ const menu =
         {
             id: 10,
             name: 'Tronco-Pizza',
-            precio: '$870',
+            precio: 870,
             data: 'Para todo el dia',
             img: './assets/img/menu_reco2.jpg',
             cat: 'Pizza',
@@ -135,7 +138,7 @@ const menu =
         {
             id: 11,
             name: 'Papas / Provenzal',
-            precio: '$360',
+            precio: 360,
             data: 'Van como piña',
             img: './assets/img/menu_reco3.jpg',
             cat: 'Napapuki',
@@ -144,9 +147,9 @@ const menu =
         },
         {
             id: 12,
-            name: 'La rompe higados',
-            precio: '$2360',
-            data: 'Va con un hepatalgina',
+            name: 'Rompe higados',
+            precio: 2360,
+            data: 'Va con hepatalgina',
             img: './assets/img/burguers/rompehigados.jpg',
             cat: 'Hamburguesas',
             popular: false,
@@ -155,7 +158,7 @@ const menu =
         {
             id: 13,
             name: 'Primavera',
-            precio: '$2110',
+            precio: 2110,
             data: 'Refrescante',
             img: './assets/img/burguers/primavera.jpg',
             cat: 'Hamburguesas',
@@ -165,7 +168,7 @@ const menu =
         {
             id: 14,
             name: 'Cheddar * 3',
-            precio: '$2520',
+            precio: 2520,
             data: 'Delicia de la casa',
             img: './assets/img/burguers/triple-cheddar.jpeg',
             cat: 'Hamburguesas',
@@ -175,7 +178,7 @@ const menu =
         {
             id: 15,
             name: 'p/verdeo+cheddar',
-            precio: '$920',
+            precio: 920,
             data: 'Explocion galactica',
             img: './assets/img/papas/cheddar-verdeo.png',
             cat: 'Napapuki',
@@ -185,7 +188,7 @@ const menu =
         {
             id: 16,
             name: 'p/ Barbacoa',
-            precio: '$1050',
+            precio: 1050,
             data: 'A otra dimencion',
             img: './assets/img/papas/papas-barbacoa.jpg',
             cat: 'Napapuki',
@@ -195,7 +198,7 @@ const menu =
         {
             id: 17,
             name: 'p/ Beacon',
-            precio: '$1150',
+            precio: 1150,
             data: 'Tormenta nebular',
             img: './assets/img/papas/papas-beacon.jpg',
             cat: 'Napapuki',
@@ -205,7 +208,7 @@ const menu =
         {
             id: 18,
             name: 'Wrpa/Vegetales',
-            precio: '$1310',
+            precio: 1310,
             data: 'Cadenas de andromeda',
             img: './assets/img/wraps/wrap-vegetales.jpg',
             cat: 'Wraps',
@@ -215,7 +218,7 @@ const menu =
         {
             id: 19,
             name: 'Wrpa/italiano',
-            precio: '$1410',
+            precio: 1410,
             data: 'Polvo de diamante',
             img: './assets/img/wraps/wrap-italiano.jpg',
             cat: 'Wraps',
@@ -225,7 +228,7 @@ const menu =
         {
             id: 20,
             name: 'Wrpa/Pollo',
-            precio: '$1190',
+            precio: 1190,
             data: 'Gran cuerno',
             img: './assets/img/wraps/wrap-pollo.jpg',
             cat: 'Wraps',
@@ -235,7 +238,7 @@ const menu =
         {
             id: 21,
             name: 'Taco/Asado',
-            precio: '$1990',
+            precio: 1990,
             data: 'Espada escalubur',
             img: './assets/img/tacos/taco-asado.jpg',
             cat: 'Mexican food',
@@ -245,7 +248,7 @@ const menu =
         {
             id: 22,
             name: 'Taco/Cerdo',
-            precio: '$1770',
+            precio: 1770,
             data: 'Ejecucion aurora',
             img: './assets/img/tacos/taco-cerdo.jpg',
             cat: 'Mexican food',
@@ -255,7 +258,7 @@ const menu =
         {
             id: 23,
             name: 'Taco/Primavera',
-            precio: '$1770',
+            precio: 1770,
             data: 'Rosas pirañas',
             img: './assets/img/tacos/taco-primavera.jpg',
             cat: 'Mexican food',
