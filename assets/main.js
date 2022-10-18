@@ -9,20 +9,14 @@ const precioTotal = document.getElementById('precio_total')
 const subTotal = document.getElementById('sub_cart')
 const sellCart = document.getElementById('sell_cart')
 
-
-
-
 /* Carrito de compras */
 const overlay = document.querySelector('.overlay');
 const cartMenu = document.querySelector('.cart');
 const btnClose = document.querySelector('.btn_close')
 const cartBtn = document.querySelector('.cart_container');
-
-
 const saveCarrito = (carrito) => {
     localStorage.setItem('compras', JSON.stringify(carrito))
 }
-
 
 const rendersection = menu => {
     return `
@@ -36,7 +30,6 @@ const rendersection = menu => {
             <button class="btn btn_card" id= "btn_add" data-id = ${menu.id} >Agregar</button>
         </div> `
 };
-
 
 const selectCategories = (e) => {
     tag = e.target.getAttribute('data-id')
@@ -92,29 +85,18 @@ const renderPopular = (prod) => {
     </div>
      `
 }
-
 const cantTotalproductos = () => {
     let totalProductos = 0
     carrito.forEach(prod =>
-        totalProductos = totalProductos + prod.cant
-
-
-    )
+        totalProductos = totalProductos + prod.cant)
     return totalProductos
 }
-
 const setPrecio = (carrito) => {
     pTotal = 0
     carrito.forEach(prod => pTotal += (prod.precio * prod.cant))
     console.log(pTotal)
     return pTotal
 }
-
-
-
-
-
-
 
 const addCarrito = (e) => {
 
@@ -128,6 +110,7 @@ const addCarrito = (e) => {
             producto.cant = 1
             carrito = [...carrito, producto]
             saveCarrito(carrito)
+            renderCarrito(carrito)
             precioTotal.textContent = setPrecio(carrito)
             subTotal.textContent = setPrecio(carrito)
         } else {
@@ -164,10 +147,6 @@ const addCarrito = (e) => {
         return
     }
 }
-
-
-
-
 
 const renderPage = () => {
     renderCarrito(carrito)
@@ -226,8 +205,13 @@ const compraFinal = () => {
         cantProductos.textContent = cantTotalproductos()
     }
 };
-
-
+const checkCarrito = () => {
+    console.log(carrito)
+    if (carrito.length === 0) {
+        console.log('hola')
+        sellCart.innerHTML = `<h2>No hay productos en el carrito</h2>`
+    }
+}
 
 const closeCart = () => {
     cartMenu.classList.remove('open_cart');
@@ -243,6 +227,7 @@ const closeOnScroll = () => {
 };
 
 const init = () => {
+    // checkCarrito(carrito)
     window.addEventListener('DOMContentLoaded', renderPage);
     cartBtn.addEventListener('click', toggleCart);
     btnClose.addEventListener('click', closeCart);
@@ -250,6 +235,5 @@ const init = () => {
     cantProductos.textContent = cantTotalproductos()
     btnBuy.addEventListener('click', compraFinal)
 }
-
 
 init()
