@@ -320,6 +320,19 @@ main {
     left: -50;
 }
 
+.disable_buy {
+    cursor: not-allowed;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.cart_empty {
+    padding: 40px;
+    color: #FFA100;
+}
+
 .card {
     background: #252525;
     box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.9);

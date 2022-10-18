@@ -14,6 +14,7 @@ const overlay = document.querySelector('.overlay');
 const cartMenu = document.querySelector('.cart');
 const btnClose = document.querySelector('.btn_close')
 const cartBtn = document.querySelector('.cart_container');
+
 const saveCarrito = (carrito) => {
     localStorage.setItem('compras', JSON.stringify(carrito))
 }
@@ -125,12 +126,15 @@ const addCarrito = (e) => {
                     precioTotal.textContent = setPrecio(carrito)
                     subTotal.textContent = setPrecio(carrito)
                 } else {
+
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito = carrito.filter(prod => prod.id != existente.id)
                     precioTotal.textContent = setPrecio(carrito)
                     subTotal.textContent = setPrecio(carrito)
                     saveCarrito(carrito)
                     renderCarrito(carrito)
+                    checkCarrito(carrito);
+
                 }
             } else {
                 existente.cant = existente.cant + 1
@@ -179,7 +183,7 @@ const buyItems = (e) => {
     }
     /*CARRITO FUNCIONES*/
 const toggleCart = () => {
-
+    checkCarrito(carrito);
     cartMenu.classList.remove('hidden');
     cartMenu.classList.toggle('open_cart');
     overlay.classList.toggle('show_overlay');
@@ -205,11 +209,15 @@ const compraFinal = () => {
         cantProductos.textContent = cantTotalproductos()
     }
 };
-const checkCarrito = () => {
+const checkCarrito = (carrito) => {
     console.log(carrito)
     if (carrito.length === 0) {
-        console.log('hola')
-        sellCart.innerHTML = `<h2>No hay productos en el carrito</h2>`
+        btnBuy.classList.remove('enable_buy', 'btn_buy')
+        btnBuy.classList.add('disable_buy')
+        sellCart.innerHTML = `<h4 class = "cart_empty">No hay productos en el carrito</h4>`
+    } else {
+        btnBuy.classList.remove('disable_buy')
+        btnBuy.classList.add('btn_buy')
     }
 }
 
@@ -227,7 +235,6 @@ const closeOnScroll = () => {
 };
 
 const init = () => {
-    // checkCarrito(carrito)
     window.addEventListener('DOMContentLoaded', renderPage);
     cartBtn.addEventListener('click', toggleCart);
     btnClose.addEventListener('click', closeCart);
