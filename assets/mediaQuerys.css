@@ -42,7 +42,7 @@
         transform: none
     }
     .navbar_menu {
-        display: none
+        display: flex
     }
     .card_recomendation {
         width: 307px;
