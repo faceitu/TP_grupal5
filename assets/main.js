@@ -4,6 +4,12 @@ const mostPopular = document.getElementById('container_most_popular');
 const btnCall = document.querySelectorAll('btn_card');
 const tituloMostpopular = document.getElementById('title_most')
 const cantProductos = document.querySelector('.counter_cart')
+const btnBuy = document.querySelector('.btn_buy')
+const precioTotal = document.getElementById('precio_total')
+const subTotal = document.getElementById('sub_cart')
+const sellCart = document.getElementById('sell_cart')
+
+
 
 
 /* Carrito de compras */
@@ -111,67 +117,49 @@ const setPrecio = (carrito) => {
 
 
 const addCarrito = (e) => {
-    const precioTotal = document.getElementById('precio_total')
 
     if (e.target.nodeName === "BUTTON") {
         tag = e.target.getAttribute('data-id')
         tag2 = e.target.getAttribute('data-resta')
         const producto = menu.find(item => item.id === Number(tag))
         let existente = carrito.find(prod => prod.id === producto.id)
-
         console.log(carrito)
         if (!existente & tag2 != 'resta') {
             producto.cant = 1
             carrito = [...carrito, producto]
             saveCarrito(carrito)
-
             precioTotal.textContent = setPrecio(carrito)
-
+            subTotal.textContent = setPrecio(carrito)
         } else {
             if (tag2 === 'resta') {
                 if (existente.cant > 1) {
                     existente.cant = existente.cant - 1
-                    const sellCart = document.getElementById('sell_cart')
                     saveCarrito(carrito)
                     sellCart.innerHTML = carrito.map(prod =>
                         renderCompra(prod)).join('')
-
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
-
                     precioTotal.textContent = setPrecio(carrito)
+                    subTotal.textContent = setPrecio(carrito)
                 } else {
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito = carrito.filter(prod => prod.id != existente.id)
-
-                    const sellCart = document.getElementById('sell_cart')
-
                     precioTotal.textContent = setPrecio(carrito)
+                    subTotal.textContent = setPrecio(carrito)
                     saveCarrito(carrito)
-                    sellCart.innerHTML = carrito.map(prod =>
-                        renderCompra(prod)).join('')
-
-
+                    renderCarrito(carrito)
                 }
-
             } else {
-
                 existente.cant = existente.cant + 1
-
                 const index = carrito.findIndex((element) => element.id === existente.id);
                 carrito[index] = existente
-                const sellCart = document.getElementById('sell_cart')
                 saveCarrito(carrito)
-
+                subTotal.textContent = setPrecio(carrito)
                 precioTotal.textContent = setPrecio(carrito)
-                sellCart.innerHTML = carrito.map(prod =>
-                    renderCompra(prod)).join('')
-
+                renderCarrito(carrito)
             }
         }
-
         cantProductos.textContent = cantTotalproductos()
-
     } else {
         return
     }
@@ -182,6 +170,7 @@ const addCarrito = (e) => {
 
 
 const renderPage = () => {
+    renderCarrito(carrito)
     mostPopular.addEventListener('click', addCarrito)
     finding.addEventListener('click', addCarrito)
     populars = menu.filter(prod => prod.popular === true);
@@ -206,24 +195,37 @@ const renderCompra = (menu) => {
             </div> 
             `
 }
-const hola = (e) => {
+const buyItems = (e) => {
         addCarrito(e)
     }
     /*CARRITO FUNCIONES*/
 const toggleCart = () => {
-    const precioTotal = document.getElementById('precio_total')
-    precioTotal.textContent = setPrecio(carrito)
+
     cartMenu.classList.remove('hidden');
     cartMenu.classList.toggle('open_cart');
     overlay.classList.toggle('show_overlay');
-    const sellCart = document.getElementById('sell_cart')
-    sellCart.addEventListener('click', hola)
-    sellCart.innerHTML = carrito.map(prod =>
-        renderCompra(prod)).join('')
-
-
+    sellCart.addEventListener('click', buyItems)
+    precioTotal.textContent = setPrecio(carrito)
+    subTotal.textContent = setPrecio(carrito)
 
 }
+const renderCarrito = (carrito) => {
+    sellCart.innerHTML = carrito.map(prod =>
+        renderCompra(prod)).join('')
+}
+
+const compraFinal = () => {
+    if (!carrito.length) return;
+    if (window.confirm('Desea completar su compra?')) {
+        carrito = [];
+        saveCarrito(carrito)
+        alert('Compra exitosa');
+        precioTotal.textContent = setPrecio(carrito)
+        subTotal.textContent = setPrecio(carrito)
+        renderCarrito(carrito)
+        cantProductos.textContent = cantTotalproductos()
+    }
+};
 
 
 
@@ -246,6 +248,7 @@ const init = () => {
     btnClose.addEventListener('click', closeCart);
     window.addEventListener('scroll', closeOnScroll);
     cantProductos.textContent = cantTotalproductos()
+    btnBuy.addEventListener('click', compraFinal)
 }
 
 
