@@ -119,8 +119,7 @@ const addCarrito = (e) => {
                 if (existente.cant > 1) {
                     existente.cant = existente.cant - 1
                     saveCarrito(carrito)
-                    sellCart.innerHTML = carrito.map(prod =>
-                        renderCompra(prod)).join('')
+                    renderCarrito(carrito)
                     const index = carrito.findIndex((element) => element.id === existente.id);
                     carrito[index] = existente
                     precioTotal.textContent = setPrecio(carrito)

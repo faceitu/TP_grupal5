@@ -1,64 +1,59 @@
 /*TABLETS*/
 
-@media (max-width: 768px){
-    body{
+@media (max-width: 768px) {
+    body {
         width: 100%;
     }
     .hero {
         margin-top: 20%;
     }
-    .cart{
-    display: none;
+    .cart {
+        display: none;
     }
-    .hero{
+    .hero {
         display: flex;
     }
     .hero_right {
         display: none;
     }
-    .hero_slogan{
+    .hero_slogan {
         text-align: center;
     }
-    .footer_links{
+    .footer_links {
         flex-direction: column;
         text-align: center;
     }
-    .title_section_h3 .title_categories{
+    .title_section_h3 .title_categories {
         text-align: center;
     }
-    .title_categories{
+    .title_categories {
         text-align: center;
     }
-    .title_section_h3{
-    text-align: center;
+    .title_section_h3 {
+        text-align: center;
     }
-    .container_categories{
+    .container_categories {
         align-items: center;
         justify-content: center;
     }
-
     .card:hover {
         opacity: 0.9;
         background-color: #2e2c2c;
         transform: none
     }
-
     .navbar_menu {
         display: none
-        
     }
-
     .card_recomendation {
         width: 307px;
         height: 103px;
-    } 
-
-
-    .icon_not_found, .text_not_found{
+    }
+    .icon_not_found,
+    .text_not_found {
         font-size: 25px;
         text-align: center;
-    
     }
 }
+
 
 /*CELLPHONES*/
