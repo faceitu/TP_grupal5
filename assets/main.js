@@ -26,7 +26,7 @@ const rendersection = menu => {
             <div class = "text_card" >
                 <span class = "tittle_card" > ${menu.name} </span> 
                 <p class = "subtitle_card" >${menu.data}</p> 
-                <span class="price_card"> ${menu.precio} </span> 
+                <span class="price_card">$ ${menu.precio} </span> 
             </div> 
             <button class="btn btn_card" id= "btn_add" data-id = ${menu.id} >Agregar</button>
         </div> `
@@ -79,7 +79,7 @@ const renderPopular = (prod) => {
     <div class="text_card">
     <span class="tittle_card">${prod.name} </span>
             <p class="subtitle_card"> ${prod.data}</p>
-            <span class="price_card"> ${prod.precio}</span>
+            <span class="price_card">$ ${prod.precio}</span>
         </div>
         <button class="btn btn_card" id= "btn_add" data-id = ${prod.id} >Agregar</button>
     </div>
@@ -169,7 +169,7 @@ const renderCompra = (menu) => {
             <div class = "text_card" >
                 <span class = "tittle_card" > ${menu.name} </span> 
                 <p class = "subtitle_card" >${menu.data}</p> 
-                <span class="price_card"> ${menu.precio} </span> 
+                <span class="price_card">$ ${menu.precio} </span> 
             </div> 
             <button class = "btn btn_card" data-id = ${menu.id} data-resta = "resta">-</button>
             <span id = "cant_item" data-id = ${menu.id}>${menu.cant}</span>
@@ -223,6 +223,7 @@ const checkCarrito = (carrito) => {
 const closeCart = () => {
     cartMenu.classList.remove('open_cart');
     overlay.classList.remove('show_overlay');
+    
 };
 
 const closeOnScroll = () => {

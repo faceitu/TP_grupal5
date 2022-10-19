@@ -1,17 +1,15 @@
-/*TABLETS*/
+/*TABLET*/
 
-@media (max-width: 768px) {
-    body {
+@media (max-width: 1023px) {
+
+    .hero {
+        margin-top: 100px;
+    }
+    .cart {
         width: 100%;
     }
     .hero {
-        margin-top: 20%;
-    }
-    .cart {
-        display: none;
-    }
-    .hero {
-        display: flex;
+        justify-content: center;
     }
     .hero_right {
         display: none;
@@ -19,10 +17,7 @@
     .hero_slogan {
         text-align: center;
     }
-    .footer_links {
-        flex-direction: column;
-        text-align: center;
-    }
+
     .title_section_h3 .title_categories {
         text-align: center;
     }
@@ -54,6 +49,16 @@
         text-align: center;
     }
 }
-
-
 /*CELLPHONES*/
+
+@media (max-width: 599px) {
+
+    .footer_links {
+        flex-direction: column;
+        text-align: center;
+    }
+ 
+}
+
+
+
