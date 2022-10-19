@@ -1,12 +1,11 @@
 /*TABLET*/
 
 @media (max-width: 1023px) {
-
     .hero {
         margin-top: 100px;
     }
     .cart {
-        width: 100%;
+        width: 100vw;
     }
     .hero {
         justify-content: center;
@@ -17,7 +16,6 @@
     .hero_slogan {
         text-align: center;
     }
-
     .title_section_h3 .title_categories {
         text-align: center;
     }
@@ -49,16 +47,13 @@
         text-align: center;
     }
 }
+
+
 /*CELLPHONES*/
 
 @media (max-width: 599px) {
-
     .footer_links {
         flex-direction: column;
         text-align: center;
     }
- 
 }
-
-
-
