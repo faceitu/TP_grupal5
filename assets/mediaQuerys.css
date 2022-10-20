@@ -6,6 +6,9 @@
     }
     .cart {
         width: 100vw;
+    position: absolute;
+    padding: 10px 20px;
+}
     }
     .hero {
         justify-content: center;
