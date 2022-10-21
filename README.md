@@ -2,7 +2,5 @@
 integrantes:
 
 Fernando Aceituno
-Alan Acosta
-aron rosemberg
 Ignacio Raño
 Leandro Ciaramaria
