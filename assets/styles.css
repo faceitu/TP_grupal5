@@ -93,13 +93,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 55px;
+    gap: 50px;
 }
 
 .cart_container {
     display: flex;
     justify-content: center;
     position: relative;
+    width: 90%;
 }
 
 .counter_cart {
@@ -137,7 +138,8 @@ header{
     height: 100vh;
     overflow-y: scroll;
     z-index: 99999;
-    min-width: 490px;
+    /* min-width: 390px; */
+    width: 40%;
     transform: translate(200%);
     transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
@@ -331,7 +333,7 @@ header{
 }
 
 .cart_empty {
-    padding: 40px;
+    padding: 30px;
     color: #FFA100;
 }
 
@@ -343,7 +345,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 0.7em;
-    padding: 15px 20px;
+    padding: 10px 10px;
     color: #FFFFFF;
     transition: all .2s ease-in-out;
 }

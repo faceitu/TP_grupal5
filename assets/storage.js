@@ -80,7 +80,7 @@ const menu =
             name: 'Picantovich',
             precio: 750,
             data: 'Pica 2 veces',
-            img: './assets/img/menu5.png',
+            img: './assets/img/picant.png',
             cat: 'Pizza',
             popular: false,
             recomendada: true
@@ -110,7 +110,7 @@ const menu =
             name: 'Nick Gi',
             precio: 0,
             data: 'La que desaparece',
-            img: './assets/img/menu4.png',
+            img: './assets/img/menu5.png',
             cat: 'Pizza',
             popular: false,
             recomendada: false
@@ -240,7 +240,7 @@ const menu =
             name: 'Taco/Asado',
             precio: 1990,
             data: 'Espada escalubur',
-            img: './assets/img/tacos/taco-asado.jpg',
+            img: "./assets/img/Tacos/taco-asado.jpg",
             cat: 'Mexican food',
             popular: false,
             recomendada: true
